@@ -3,7 +3,12 @@
 html,
 body,
 h1,
-div,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
 ul,
 li {
   margin: 0;
@@ -31,6 +36,7 @@ img {
 
 .header {
   max-width: 960px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
@@ -54,21 +60,21 @@ li:last-child {
   margin-right: 0px;
 }
 
-.wrapblue {
+.wrap_blue {
   max-width: 960px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
 
-.blueblock {
+.blue_block {
   background-color: blue;
   width: 31.25%;
   height: 300px;
   margin-bottom: 20px;
 }
 
-.wrapred {
+.wrap_red {
   max-width: 960px;
   display: flex;
   justify-content: space-between;
@@ -76,7 +82,7 @@ li:last-child {
   margin: 0 auto;
 }
 
-.redblock {
+.red_block {
   background-color: red;
   width: 31.25%;
   height: 300px;
@@ -105,12 +111,12 @@ li:last-child {
     margin-bottom: 10px;
   }
 
-  .wrapblue,
-  .wrapred {
+  .wrap_blue,
+  .wrap_red {
     display: block;
   }
-  .blueblock,
-  .redblock {
+  .blue_block,
+  .red_block {
     width: 100%;
   }
 }
