@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+p {
+  font-size: 30px;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
