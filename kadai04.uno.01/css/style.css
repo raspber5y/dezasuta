@@ -54,6 +54,7 @@ body {
 .header_logo {
   width: 226px;
 }
+
 .header_wrap {
   position: absolute;
   top: 0;
@@ -78,4 +79,48 @@ body {
   font-size: 18px;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.lead {
+  text-align: center;
+  margin: 104px;
+}
+.concept_en {
+  font-size: 30px;
+}
+.concept {
+  font-size: 82px;
+}
+
+.concept_text {
+  font-size: 23px;
+}
+
+.about {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.about_pic {
+  width: 50%;
+  height: 560px;
+  object-fit: cover;
+  border-radius: 0px 0px 82px 0px;
+}
+
+.about_logo {
+  width: 37%;
+}
+
+.about_lead {
+  font-size: 44px;
+}
+
+.about_content {
+  font-size: 16px;
+  width: 41%;
 }
