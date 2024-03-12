@@ -52,26 +52,24 @@ body {
   background-color: #e8d9bf;
 }
 
+/* ヘッダー部分 */
 .header_logo {
   width: 226px;
 }
-
 .header_wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  align-items: center;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
   padding: 10px 7% 0 2.8%;
+  width: 100%;
 }
-
 .pc_nav ul {
   display: flex;
 }
-
 .pc_nav ul li {
   width: 105px;
   margin-left: 55px;
@@ -82,10 +80,12 @@ body {
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
+/* メイン部分 */
 .main {
   margin: 0 auto;
 }
 
+/* コンセプト部分 */
 .lead {
   text-align: center;
   padding-top: 70px;
@@ -95,48 +95,44 @@ body {
 }
 .concept {
   font-size: 82px;
+  font-weight: normal;
   padding-top: 50px;
   line-height: 1.17;
   letter-spacing: 0.1em;
-  font-weight: normal;
 }
-
 .concept_text {
   font-size: 23px;
   padding-top: 50px;
 }
 
+/* about us部分 */
 .about {
   max-width: 1000px;
   margin: 0 auto;
-  margin-top: 100px;
-  padding-top: 0;
+  padding-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
   display: flex;
   justify-content: space-between;
 }
-
 .about_pic_wrap {
   width: 50%;
 }
-
 .about_pic {
   height: 560px;
   object-fit: cover;
   border-radius: 0px 0px 82px 0px;
 }
-
 .about_wrap {
   width: 41%;
   padding-left: 10px;
   padding-right: 10px;
 }
-
 .about_logo {
   width: 272px;
   margin: 0 auto 45px 0;
   padding-top: 56px;
 }
-
 .about_lead {
   font-size: 44px;
   font-weight: normal;
@@ -144,7 +140,6 @@ body {
   margin-bottom: 20px;
   padding-top: 0;
 }
-
 .about_content {
   width: 100%;
   font-size: 16px;
@@ -153,6 +148,7 @@ body {
   text-align-last: left;
 }
 
+/* menu部分 */
 .menu {
   max-width: 1000px;
   margin: 0 auto;
@@ -160,36 +156,30 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 }
-
 .menu_logo {
   width: 151px;
   margin: 0 auto 40px;
 }
-
 .menu_wrap {
   display: flex;
   justify-content: space-between;
   font-size: 38px;
 }
-
 .menu_item {
   width: 30%;
 }
-
 .menu_pic {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 0px 41px 0px 0px;
 }
-
 .menu_title {
   font-size: 38px;
   margin-top: -12px;
   margin-left: 14px;
   color: #d30202;
 }
-
 .menu_content {
   font-size: 17px;
   width: 100%;
@@ -199,6 +189,7 @@ body {
   padding-top: 25px;
 }
 
+/* gallery部分 */
 .gallery {
   padding-top: 108px;
 }
@@ -208,18 +199,17 @@ body {
   width: 245px;
   vertical-align: bottom;
 }
-
 .gallery_pic {
   height: 300px;
   position: relative;
   box-sizing: border-box;
   display: block;
 }
-
 .gallery_pic_wrap {
   display: flex;
 }
 
+/* evnt部分 */
 .event {
   margin: 0 auto;
   max-width: 1000px;
@@ -227,13 +217,11 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 }
-
 .event_logo {
   margin: 0 auto;
   width: 173px;
   vertical-align: bottom;
 }
-
 .event_block {
   display: flex;
   justify-content: center;
@@ -241,20 +229,17 @@ body {
   border: 3px solid #4f260b;
   margin-top: 40px;
 }
-
 .event_list {
-  text-align: justify;
   padding: 36px;
 }
-
 time {
   margin-right: 50px;
 }
-
 .event_item {
   margin-top: 20px;
 }
 
+/* access部分 */
 .access_logo {
   margin: 0 auto;
   padding-top: 75px;
@@ -262,11 +247,11 @@ time {
   width: 213px;
   vertical-align: bottom;
 }
-
 .access_map {
   height: 471px;
 }
 
+/* フッター部分 */
 .footer {
   background-color: #fff;
   height: 393px;
@@ -279,13 +264,11 @@ time {
   margin: 0 auto;
   display: flex;
 }
-
 .footer_logo {
   height: 50px;
   margin: -7px;
   padding-right: 70px;
 }
-
 .footer_list {
   font-size: 20px;
   padding-bottom: 20px;
@@ -296,6 +279,7 @@ time {
   padding-top: 60px;
 }
 
+/* トップボタン */
 .pagetop {
   position: fixed;
   right: 40px;
@@ -303,6 +287,7 @@ time {
   width: 125px;
 }
 
+/* スマホ対応 */
 @media screen and (max-width: 375px) {
   .header_wrap {
     display: block;
