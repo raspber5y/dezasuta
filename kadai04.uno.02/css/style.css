@@ -302,3 +302,59 @@ time {
   bottom: 40px;
   width: 125px;
 }
+
+@media screen and (max-width: 375px) {
+  .header_wrap {
+    display: block;
+  }
+
+  .pc_nav ul {
+    display: block;
+  }
+
+  .about {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .about_pic_wrap {
+    width: 100%;
+  }
+
+  .about_wrap {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .concept {
+    font-size: 38px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+  }
+
+  .menu_item {
+    width: 100%;
+  }
+
+  .menu_wrap {
+    display: block;
+  }
+
+  .event_block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer_wrap {
+    display: block;
+  }
+
+  .footer_list {
+    padding-top: 30px;
+  }
+
+  li span {
+    display: block;
+  }
+}
