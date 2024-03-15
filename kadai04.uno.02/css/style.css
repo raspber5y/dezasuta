@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* cssリセット */
 
 /*利用するタグによってこちらの内容は増やす*/
@@ -24,6 +28,7 @@ li {
   font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
     "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
     "ＭＳ 明朝", serif;
+  font-feature-settings: "palt";
 }
 
 a {
@@ -31,6 +36,7 @@ a {
   text-decoration: none;
   /*色を消す*/
   color: inherit;
+  transition: 0.3s;
 }
 
 ul {
@@ -88,7 +94,7 @@ body {
 /* コンセプト部分 */
 .lead {
   text-align: center;
-  padding-top: 70px;
+  padding-top: 90px;
 }
 .concept_en {
   font-size: 30px;
@@ -96,13 +102,15 @@ body {
 .concept {
   font-size: 82px;
   font-weight: normal;
-  padding-top: 50px;
+  padding-top: 40px;
   line-height: 1.17;
   letter-spacing: 0.1em;
 }
 .concept_text {
   font-size: 23px;
-  padding-top: 50px;
+  padding-top: 30px;
+  line-height: 1.65;
+  letter-spacing: 0.1em;
 }
 
 /* about us部分 */
@@ -130,7 +138,7 @@ body {
 }
 .about_logo {
   width: 272px;
-  margin: 0 auto 45px 0;
+  margin: 0 auto 40px 0;
   padding-top: 56px;
 }
 .about_lead {
@@ -145,14 +153,13 @@ body {
   font-size: 16px;
   line-height: 1.62;
   text-align: justify;
-  text-align-last: left;
 }
 
 /* menu部分 */
 .menu {
   max-width: 1000px;
   margin: 0 auto;
-  padding-top: 108px;
+  padding-top: 100px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -170,7 +177,6 @@ body {
 }
 .menu_pic {
   width: 100%;
-  height: 200px;
   object-fit: cover;
   border-radius: 0px 41px 0px 0px;
 }
@@ -186,12 +192,12 @@ body {
   line-height: 1.47;
   text-align: justify;
   text-align-last: left;
-  padding-top: 25px;
+  padding-top: 10px;
 }
 
 /* gallery部分 */
 .gallery {
-  padding-top: 108px;
+  padding-top: 80px;
 }
 .gallery_logo {
   margin: 0 auto;
@@ -200,7 +206,6 @@ body {
   vertical-align: bottom;
 }
 .gallery_pic {
-  height: 300px;
   position: relative;
   box-sizing: border-box;
   display: block;
@@ -221,16 +226,17 @@ body {
   margin: 0 auto;
   width: 173px;
   vertical-align: bottom;
+  padding-bottom: 30px;
 }
 .event_block {
   display: flex;
   justify-content: center;
   background-color: #fff;
-  border: 3px solid #4f260b;
-  margin-top: 40px;
+  border: 3.6px solid #4f260b;
 }
 .event_list {
-  padding: 36px;
+  font-size: 23px;
+  padding: 40px 16% 40px 16%;
 }
 time {
   margin-right: 50px;
@@ -242,7 +248,7 @@ time {
 /* access部分 */
 .access_logo {
   margin: 0 auto;
-  padding-top: 75px;
+  padding-top: 70px;
   padding-bottom: 27px;
   width: 213px;
   vertical-align: bottom;
@@ -254,10 +260,10 @@ time {
 /* フッター部分 */
 .footer {
   background-color: #fff;
-  height: 393px;
   padding-top: 82px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 80px;
 }
 .footer_wrap {
   max-width: 1000px;
@@ -271,10 +277,12 @@ time {
 }
 .footer_list {
   font-size: 20px;
+  color: black;
   padding-bottom: 20px;
 }
 
 .copyright {
+  color: black;
   text-align: center;
   padding-top: 60px;
 }
