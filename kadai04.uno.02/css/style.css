@@ -244,6 +244,9 @@ time {
 .event_item {
   margin-top: 20px;
 }
+.border {
+  text-decoration: underline;
+}
 
 /* access部分 */
 .access_logo {
@@ -280,11 +283,12 @@ time {
   color: black;
   padding-bottom: 20px;
 }
-
 .copyright {
-  color: black;
   text-align: center;
   padding-top: 60px;
+}
+.copyright p {
+  color: black;
 }
 
 /* トップボタン */
