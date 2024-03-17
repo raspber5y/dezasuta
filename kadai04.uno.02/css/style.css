@@ -177,7 +177,6 @@ body {
 }
 .menu_pic {
   width: 100%;
-  object-fit: cover;
   border-radius: 0px 41px 0px 0px;
 }
 .menu_title {
@@ -256,8 +255,9 @@ time {
   width: 213px;
   vertical-align: bottom;
 }
-.access_map {
-  height: 471px;
+.access_map iframe {
+  width: 100%;
+  height: 100%;
 }
 
 /* フッター部分 */
