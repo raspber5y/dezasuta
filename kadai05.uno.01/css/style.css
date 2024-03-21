@@ -97,17 +97,17 @@ body {
   padding-top: 90px;
 }
 .concept_en {
-  font-size: 30px;
+  font-size: clamp(17px, 1.56vw, 30px);
 }
 .concept {
-  font-size: 82px;
+  font-size: clamp(38px, 4.27vw, 82px);
   font-weight: normal;
   padding-top: 40px;
   line-height: 1.17;
   letter-spacing: 0.1em;
 }
 .concept_text {
-  font-size: 23px;
+  font-size: clamp(16px, 1.19vw, 23px);
   padding-top: 30px;
   line-height: 1.65;
   letter-spacing: 0.1em;
@@ -133,8 +133,9 @@ body {
 }
 .about_wrap {
   width: 41%;
-  padding-left: 10px;
-  padding-right: 10px;
+}
+.about_pic_sp {
+  display: none;
 }
 .about_logo {
   width: 272px;
@@ -142,11 +143,10 @@ body {
   padding-top: 56px;
 }
 .about_lead {
-  font-size: 44px;
+  font-size: clamp(36px, 2.29vw, 44px);
   font-weight: normal;
   line-height: 1.38;
   margin-bottom: 20px;
-  padding-top: 0;
 }
 .about_content {
   width: 100%;
@@ -165,12 +165,13 @@ body {
 }
 .menu_logo {
   width: 151px;
-  margin: 0 auto 40px;
+  margin: 0 auto;
 }
 .menu_wrap {
   display: flex;
   justify-content: space-between;
   font-size: 38px;
+  padding-top: 40px;
 }
 .menu_item {
   width: 30%;
@@ -213,7 +214,7 @@ body {
   display: flex;
 }
 
-/* evnt部分 */
+/* event部分 */
 .event {
   margin: 0 auto;
   max-width: 1000px;
@@ -304,56 +305,154 @@ time {
   .header_wrap {
     display: block;
   }
-
+  .header_logo {
+    width: 187px;
+  }
   .pc_nav ul {
     display: block;
   }
 
-  .about {
-    display: block;
-    padding-left: 10px;
-    padding-right: 10px;
+  .lead {
+    padding-top: 40px;
   }
-
-  .about_pic_wrap {
-    width: 100%;
+  .concept_en {
+    font-size: 17px;
   }
-
-  .about_wrap {
-    width: 100%;
-    justify-content: center;
-  }
-
   .concept {
     font-size: 38px;
     line-height: 1.15;
     letter-spacing: 0.02em;
+    padding-top: 25px;
+  }
+  .concept_text {
+    width: 336px;
+    font-size: 16px;
+    line-height: 1.87;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+  .concept_text span {
+    display: inline-block;
   }
 
+  .about {
+    display: block;
+    padding-top: 0px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about_pic {
+    display: none;
+  }
+  .about_wrap {
+    width: 100%;
+  }
+  .about_pic_sp {
+    width: 100%;
+    display: block;
+  }
+  .about_logo {
+    width: 160px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+  .about_lead {
+    margin-top: 30px;
+    margin-left: 5.3%;
+    margin-right: 5.3%;
+  }
+  .about_content {
+    width: 89%;
+    margin-left: 5.3%;
+    margin-right: 5.3%;
+  }
+
+  .menu {
+    padding-top: 50px;
+    padding-left: 9.8%;
+    padding-right: 9.8%;
+  }
+  .menu_logo {
+    width: 87px;
+  }
   .menu_item {
     width: 100%;
   }
-
   .menu_wrap {
     display: block;
+    padding-top: 20px;
+  }
+  .menu_content {
+    line-height: 1.58;
+    padding-top: 25px;
+    margin-bottom: 50px;
   }
 
+  .gallery {
+    padding-top: 30px;
+  }
+  .gallery_logo {
+    width: 142px;
+    padding-bottom: 20px;
+  }
+
+  .event {
+    padding-left: 5.3%;
+    padding-right: 5.3%;
+  }
   .event_block {
+    display: block;
+  }
+  .event_logo {
+    width: 100px;
+  }
+  .event_block ul li {
+    display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
+  }
+  .event_list {
+    padding: 20px 2.5% 15px 6.47%;
+    font-size: 16px;
+  }
+  .border {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
+  .access_logo {
+    width: 124px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .footer {
+    padding-top: 40px;
+    padding-left: 20px;
+  }
   .footer_wrap {
     display: block;
   }
-
+  .footer_logo {
+    margin: 0;
+    padding-bottom: 15px;
+  }
   .footer_list {
-    padding-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 0;
   }
+  .copyright {
+    padding-top: 40px;
+  }
+}
 
-  li span {
-    display: block;
-  }
+.pagetop {
+  right: 5px;
+  bottom: 255px;
+  width: 100px;
 }
 
 /* ハンバーガーメニュー */
@@ -443,4 +542,10 @@ time {
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
       "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   }
+}
+
+.border {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
