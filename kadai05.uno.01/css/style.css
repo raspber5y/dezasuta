@@ -236,7 +236,7 @@ body {
 }
 .event_list {
   font-size: 23px;
-  padding: 40px 16% 40px 16%;
+  padding: 40px 30px;
 }
 time {
   margin-right: 50px;
@@ -259,6 +259,8 @@ time {
 .access_map iframe {
   width: 100%;
   height: 100%;
+  display: block;
+  height: 470px;
 }
 
 /* フッター部分 */
@@ -276,7 +278,7 @@ time {
 }
 .footer_logo {
   height: 50px;
-  margin: -7px;
+  margin-top: -7px;
   padding-right: 70px;
 }
 .footer_list {
@@ -314,9 +316,6 @@ time {
 
   .lead {
     padding-top: 40px;
-  }
-  .concept_en {
-    font-size: 17px;
   }
   .concept {
     font-size: 38px;
@@ -386,7 +385,7 @@ time {
   }
   .menu_content {
     line-height: 1.58;
-    padding-top: 25px;
+    padding-top: 10px;
     margin-bottom: 50px;
   }
 
@@ -428,9 +427,13 @@ time {
     padding-top: 30px;
     padding-bottom: 10px;
   }
+  .access_map iframe {
+    height: 190px;
+  }
 
   .footer {
     padding-top: 40px;
+    padding-bottom: 30px;
     padding-left: 20px;
   }
   .footer_wrap {
@@ -441,18 +444,19 @@ time {
     padding-bottom: 15px;
   }
   .footer_list {
-    padding-top: 15px;
-    padding-bottom: 0;
+    font-size: 18px;
+    padding-top: 13px;
+    padding-bottom: 0px;
   }
   .copyright {
     padding-top: 40px;
   }
-}
 
-.pagetop {
-  right: 5px;
-  bottom: 255px;
-  width: 100px;
+  .pagetop {
+    right: 5px;
+    bottom: 20px;
+    width: 100px;
+  }
 }
 
 /* ハンバーガーメニュー */
