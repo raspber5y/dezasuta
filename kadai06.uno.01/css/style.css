@@ -493,10 +493,7 @@ time {
 }
 
 .slick-next:before {
-  font-family: "slick";
-  font-size: 0px;
-  line-height: 1;
-  color: none;
+  display: none;
 }
 
 .slick-prev {
@@ -513,10 +510,7 @@ time {
 }
 
 .slick-prev:before {
-  font-family: "slick";
-  font-size: 0px;
-  line-height: 1;
-  color: none;
+  display: none;
 }
 
 .gallery_pic slick-slide slick-active {
@@ -533,7 +527,7 @@ time {
     height: 15px;
     border-top: 2px solid #fff;
     border-right: 2px solid #fff;
-    transform: translate(-50%) rotate(45deg);
+    transform: translate(0, -50%) rotate(45deg);
     right: 5%;
   }
 
@@ -542,7 +536,7 @@ time {
     height: 15px;
     border-top: 2px solid #fff;
     border-right: 2px solid #fff;
-    transform: translate(50%) rotate(225deg);
+    transform: translate(0, -50%) rotate(225deg);
     left: 5%;
   }
 
