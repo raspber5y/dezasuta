@@ -479,6 +479,79 @@ time {
   margin-bottom: 0;
 }
 
+.slick-next {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  transform: translate(-50%) rotate(45deg);
+  right: 21%;
+  position: absolute;
+  z-index: 1;
+}
+
+.slick-next:before {
+  font-family: "slick";
+  font-size: 0px;
+  line-height: 1;
+  color: none;
+}
+
+.slick-prev {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  transform: translate(50%) rotate(225deg);
+  left: 21%;
+  position: absolute;
+  z-index: 1;
+}
+
+.slick-prev:before {
+  font-family: "slick";
+  font-size: 0px;
+  line-height: 1;
+  color: none;
+}
+
+.gallery_pic slick-slide slick-active {
+  width: 465px;
+}
+
+@media screen and (max-width: 767px) {
+  .slick-slide img {
+    width: 100%;
+  }
+
+  .slick-next {
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: translate(-50%) rotate(45deg);
+    right: 5%;
+  }
+
+  .slick-prev {
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: translate(50%) rotate(225deg);
+    left: 5%;
+  }
+
+  /* スライドのために増やした1枚を非表示にしたいのですが、うまくできません。。 */
+  .gallery_pic_sp {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .pc_nav {
     display: none;
