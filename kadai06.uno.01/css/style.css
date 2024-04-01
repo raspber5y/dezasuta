@@ -214,6 +214,10 @@ body {
   display: flex;
 }
 
+.lb-data .lb-number {
+  display: none !important;
+}
+
 /* event部分 */
 .event {
   margin: 0 auto;
@@ -486,7 +490,7 @@ time {
   height: 28px;
   border-top: 5px solid #fff;
   border-right: 5px solid #fff;
-  transform: translate(-50%) rotate(45deg);
+  transform: translate(0, -50%) rotate(45deg);
   right: 21%;
   position: absolute;
   z-index: 1;
@@ -503,7 +507,7 @@ time {
   height: 28px;
   border-top: 5px solid #fff;
   border-right: 5px solid #fff;
-  transform: translate(50%) rotate(225deg);
+  transform: translate(0, -50%) rotate(225deg);
   left: 21%;
   position: absolute;
   z-index: 1;
