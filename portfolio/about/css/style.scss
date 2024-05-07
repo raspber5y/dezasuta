@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+@import url(../../css/common.css);
+
+h2{
+    font-size: 30px;
+    letter-spacing: 0.1em;
+}
+
+h3{
+    font-size: 25px;
+}
+
+.about,.contact {
+    width: 73%;
+    margin: 0 auto;
+}
+
+header{
+    position: relative;
+    .header_wrap{
+        position: absolute;
+        align-items: center;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 40px;
+        .emiuno_logo{
+            width: 58px;
+        }
+    }
+    img{
+        width: 100%;
+    }
+}
+
+.about{
+    padding-top: 70px;
+    .about_title{
+        display: flex;
+        align-items: center;
+        padding-bottom: 80px;
+        margin-left: -12%;
+    }
+    .title{
+        padding-left: 10px;
+    }
+    .title_shape{
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid #012F4E;
+        border-right: 1px solid #012F4E;
+        transform: translate(-50%, 0) rotate(45deg);
+    }
+
+    .about_wrap{
+        display: flex;
+        justify-content: space-between;
+        .about_pic{
+            width: 28%;
+            img{
+                width: 100%;
+                padding-top: 38px;
+            }
+        }
+        .about_left{
+            width: 33%;
+            .left_title{
+                display: flex;
+                align-items: baseline;
+                font-family: Cambay;
+                font-size: 24px;
+                time{
+                    padding-left: 10px;
+                }
+            }
+            .left_content{
+                padding-top: 40px;
+                p{
+                    font-size: 14px;
+                    padding-bottom: 30px;
+                    line-height: 1.78;
+                }
+            }  
+        }
+        .about_right{
+            width: 30%;
+            .right_title{
+                display: flex;
+                align-items: baseline;
+                border-bottom:1px solid #012F4E;
+                padding-bottom: 10px;
+                .ja_title {
+                    margin-left: 10px;
+                    font-size: 15px;
+                }
+            }
+            ul{
+                font-size: 14px;
+                padding-top: 10px;
+                padding-bottom: 40px;
+                li{
+                    display: flex;
+                    align-items: baseline;
+                    padding-bottom: 10px;
+                    time{
+                        padding-right: 10px;
+                    }
+                }
+            }
+            .vision_content{
+                padding-top: 10px;
+                p{
+                    font-size: 14px;
+                    line-height: 1.78;
+                    letter-spacing: 0.05em;
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }
+    
+}
+
+.contact{
+    h2{
+        font-size: 50px;
+        margin-left: -12%;
+        color: #012F4E;
+    }
+}
+

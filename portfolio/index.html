@@ -8,12 +8,6 @@
     <meta name="description" content="unoemiのポートフォリオ">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Italiana&display=swap');
-    </style>
 </head>
 
 <body>
@@ -26,29 +20,28 @@
                 <p class="message_ob2">our works.</p>
             </div>
             <div class="scrolldown"><span>scroll</span></div>
-            <div>
+            <!-- <div>
                 <picture>
                     <img class="mv" src="images/TOP_picture@2x.png" alt="右上から左下に光が指す画像">
                 </picture>
-            </div>
+            </div> -->
             <div class="header_wrap">
                 <div>
                     <h1>
                         <img class="emiuno_logo" src="images/unoemi_logo.png" alt="emiunoのロゴ">
                     </h1>
                 </div>
-                <div class="pc_btn"><span></span></div>
-                <nav>
-                    <h4>MENU</h4>
-                    <ul>
-                        <li><a href="#top">top</a></li>
-                        <li><a href="#about">about</a></li>
-                        <li><a href="#works">works</a></li>
-                        <li><a href="#contact">contact</a></li>
-                    </ul>
-                </nav>
+                <div class="pc_btn">menu<span></span></div>
             </div>
-
+            <nav class="pc_nav">
+                <h4>MENU</h4>
+                <ul>
+                    <li><a href="#top">top</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#works">works</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
@@ -62,7 +55,7 @@
                     大切な想いを一緒に形にさせてください。
                 </p>
             </div>
-            <p class="view_more">view more</p>
+            <a class="view_more_btn">view more</a>
         </section>
         <section class="philosofhy">
             <div class="philosofhy_title">
@@ -102,59 +95,90 @@
                 <p class="ja_title">サービス</p>
             </div>
             <dl class="service_list">
-                <dt class="service_item">Web site creation | WEB サイト制作</dt>
+                <div class="service_item">
+                    <img src="images/diamond.png" alt="ダイヤモンドの図形">
+                    <dt class="service_item">Web site creation | WEB サイト制作</dt>
+                </div>
                 <dd>コーポレートサイト、ブランド・サービスサイト、LP（ランディングサイト）等のサイト制作をデザインからコーディングまで承ります。
-                    コーディングはどのデバイスでも見やすいよう（レスポンシブ対応）に制作いたします。</dd>
-                <dt class="service_item">Design | デザイン</dt>
+                    コーディングはどのデバイスでも見やすいよう（レスポンシブ対応）に制作いたします。
+                </dd>
+                <div class="service_item">
+                    <img src="images/diamond.png" alt="ダイヤモンドの図形">
+                    <dt class="service_item">Design | デザイン</dt>
+                </div>
                 <dd>SNS投稿用クリエイティブ、広告用クリエイティブ、サムネイル画像、チラシ・フライヤー等のデザインを承ります。</dd>
-                <dt class="service_item">Brading session | 戦略会議</dt>
+                <div class="service_item">
+                    <img src="images/diamond.png" alt="ダイヤモンドの図形">
+                    <dt class="service_item">Brading session | 戦略会議</dt>
+                </div>
                 <dd>…comming soon. </dd>
             </dl>
-            <p>その他、お悩み・お困りごとがございましたら、お気軽にご相談ください。</p>
+            <p class="service_announce">その他、お悩み・お困りごとがございましたら、お気軽にご相談ください。</p>
         </section>
         <section class="skills">
             <div class="skills_title">
                 <h3>skills</h3>
                 <p class="ja_title">対応ソフトの例</p>
             </div>
-            <ul>
-                <li>illustrator</li>
-                <li>photoshop</li>
-                <li>canva</li>
-                <li>figma</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JQuery</li>
-                <li>Saas</li>
-                <li>Google Looker Studio</li>
+            <ul class="skill_lists">
+                <div class="skill_block">
+                    <li class="skill">illustrator</li>
+                    <li class="skill">photoshop</li>
+                    <li class="skill">canva</li>
+                    <li class="skill">figma</li>
+                </div>
+                <div class="skill_block">
+                    <li class="skill">HTML</li>
+                    <li class="skill">CSS</li>
+                    <li class="skill">Saas</li>
+                    <li class="skill">JQuery</li>
+                </div>
             </ul>
-            <h5>Featured case studies.</h5>
-            <ul>
-                <li>
-                    <time>2024</time>
-                    <p>WEBサイト</p>
-                    <p>illustrator</p>
+            <p class="skill2">Google Looker Studio</p>
+            <h2 class="skill_lead">Featured case studies.</h2>
+            <ul class="TOP_works">
+                <li class="TOP_work">
+                    <div class="TOP_work_img">
+                        <img src="images/work_workers_website.png" alt="WORKERSのデザインモックアップ">
+                    </div>
+                    <div>
+                        <time>2024</time>
+                        <p class="work_ctg1">WEBサイト</p>
+                        <p class="skill_tag">illustrator</p>
+                    </div>
                 </li>
-                <li>
-                    <time>2024</time>
-                    <p>WEBサイト</p>
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>jQuery</p>
+                <li class="TOP_work">
+                    <div class="TOP_work_img">
+                        <img src="images/WORK_Designcafe _website.png" alt="DESIGHNCAFEのコーディングモックアップ">
+                    </div>
+                    <div>
+                        <time>2024</time>
+                        <p class="work_ctg2">WEBサイト</p>
+                        <p class="skill_tag">HTML</p>
+                        <p class="skill_tag">CSS</p>
+                        <p class="skill_tag">jQuery</p>
+                    </div>
                 </li>
             </ul>
-            <p>view more</p>
+            <a class="view_more_btn">view more</a>
         </section>
-        <section id="contact">
+        <section class="contact">
             <h2>Feel free to contact.</h2>
-            <p>お問い合わせ</p>
+            <div class="contact_btn">
+                <a class="btn_text">お問い合わせ</a>
+                <div class="btn_border"></div>
+            </div>
         </section>
     </main>
-
-
-
-
-
+    <footer class="footer">
+        <a href="" class="footer_btn">top</a>
+        <a href="" class="footer_btn">about</a>
+        <a href="" class="footer_btn">works</a>
+        <a href="" class="footer_btn">contact</a>
+        <div class="copyright">
+            <p>© 2024 uno emi</p>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -1,179 +1,169 @@
 @charset "utf-8";
 
+@import url(common.css);
 
-/* cssリセット */
-
-/*利用するタグによってこちらの内容は増やす*/
-
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-dl,
-dt,
-dd,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  /*デフォルトの文字色、font-familyを予め当てておく*/
-  color: #012F4E;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-  "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-  font-feature-settings: "palt";
-}
-
-a {
-  /*下線を消す*/
-  text-decoration: none;
-  /*色を消す*/
-  color: inherit;
-  transition: 0.3s;
-}
-
-ul {
-  /*左の「・」を消す*/
-  list-style: none;
-}
-
-h2,h3,h4,h5{
-    font-family: Italiana;
-    font-weight: normal;
-}
-h2{
+h2 {
   font-size: 50px;
   letter-spacing: 0.1em;
-  margin-left: -125px;
+  margin-left: -12%;
 }
-h3{
+h3 {
   font-size: 40px;
 }
-h4{
+h4 {
   font-size: 30px;
 }
-h5{
+h5 {
   font-size: 50px;
   letter-spacing: 0.1em;
 }
 
-main {
-  background: linear-gradient(to bottom, #F7E3DA, #DAB4B4);
-  width: 100vw;
-  margin: 0 auto;
-}
-.top_concept, .philosofhy, .service, .skills {
+
+.top_concept, .philosofhy, .service, .skills, .contact {
   width: 73%;
   margin: 0 auto;
 }
-.mv_wrap{
-    position: relative;
-    .mv {
-    max-width: 100%;
-    height: 650px;}
-.top_message {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      p {font-family: Italiana;}   
-      .message_v,.message_v2{
-        font-size: 71px;
-        letter-spacing: 0.092em;
-      }
-      .message_ob,.message_ob2{
-        font-size: 50px;
-        letter-spacing: 0.1em;
-      }
-      .message_v{
-        text-align: right;
-      }
-      .message_v2,.message_ob2{
-        text-align: left;
-      }
-    }
-    .scrolldown{
-      position:absolute;
-      left:13%;
-      bottom:10px;
-      height:120px;}
-    .scrolldown span{
-        /*描画位置*/
-      position: absolute;
-      left:-30px;
-      top: -30px;
-        /*テキストの形状*/
-      color: #012F4E;
-      font-family: Cambay;
-      font-size: 1.8rem;
-      letter-spacing: 0.05em;}
-    .scrolldown::after{
-        content: "";
-          /*描画位置*/
-        position: absolute;
-        top: 0;
-          /*線の形状*/
-        width: 1px;
-        height: 120px;
-        background: #012F4E;
-          /*線の動き1.4秒かけて動く。永遠にループ*/
-        animation: pathmove 1.4s ease-in-out infinite;
-        opacity:0;
-      }
-      @keyframes pathmove{
-        0%{
-          height:0;
-          top:0;
-          opacity: 0;
-        }
-        30%{
-          height:70px;
-          opacity: 1;
-        }
-        100%{
-          height:0;
-          top:120px;
-          opacity: 0;
-        }
-      }
-.header_wrap{
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px 7% 0 2.8%;
-  width: 100%;
-    
-  .emiuno_logo{
-    width: 58px;
-  }
-}
 
+.mv_wrap{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(../images/TOP_picture@2x.png) center / cover;
+  .mv {
+    max-width: 100%;
+    height: 650px;
+  }
+  .top_message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    p {font-family: Italiana;}   
+    .message_v,.message_v2{
+      font-size: 71px;
+      letter-spacing: 0.092em;
+    }
+    .message_ob,.message_ob2{
+      font-size: 50px;
+      letter-spacing: 0.1em;
+    }
+    .message_v{
+      text-align: right;
+    }
+    .message_v2,.message_ob2{
+      text-align: left;
+    }
+  }
+  .scrolldown{
+    position:absolute;
+    left:13%;
+    bottom:10px;
+    height:120px;}
+  .scrolldown span{
+    /*描画位置*/
+    position: absolute;
+    left:-35px;
+    top:-30px;
+    /*テキストの形状*/
+    color: #012F4E;
+    font-family: Cambay;
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;}
+  .scrolldown::after{
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    top: 0;
+    /*線の形状*/
+    width: 1px;
+    height: 120px;
+    background: #012F4E;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+    animation: pathmove 1.4s ease-in-out infinite;
+    opacity:0;
+  }
+  @keyframes pathmove{
+    0%{
+      height:0;
+      top:0;
+      opacity: 0;
+    }
+    30%{
+      height:70px;
+      opacity: 1;
+    }
+    100%{
+      height:0;
+      top:115px;
+      opacity: 0;
+    }
+  }
+  .header_wrap{
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+    .emiuno_logo{
+      width: 58px;
+    }
+  }
 }
 .top_concept{
   padding-top: 70px;
+  padding-bottom: 135px;
   .concept {
     font-size: 16px;
-    margin-left: 65%;
+    display: grid;
+    justify-content: flex-end;
+    margin-bottom: 80px;
     letter-spacing:0.06em;
     p{line-height: 2.18;}
     .concept_1{
       padding-bottom: 50px;
     }
+  }
 }
-.view_more {
+
+.view_more_btn {
   font-family: Cambay;
   font-size: 25px;
   margin-top: 50px;
-  margin-left: 87%;
+  display: grid;
+  justify-content: flex-end;
+  position: relative;
+  padding-right: 40px;
 }
+.view_more_btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #012f4e;
+}
+.view_more_btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: 15px;
+  height: 2px;
+  background: #012f4e;
+  transition: 0.3s;
+}
+.view_more_btn:hover::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #012f4e;
+  right: 7.5px;
 }
 
 .philosofhy_title{
@@ -181,7 +171,7 @@ main {
   justify-content: left;
   align-items: first baseline;
   border-bottom:1px solid #012F4E;
-  width: 32%;
+  width: 37%;
   margin-left: -100px;
   padding-bottom: 20px;
   .ja_title {
@@ -189,12 +179,13 @@ main {
     font-size: 18px;
   }
 }
-
 .philosophy_items {
   display: flex;
   justify-content: space-between;
 .philosophy_item {
   width: 30%;
+  padding-top: 108px;
+  padding-bottom: 240px;
   .number{
     font-size: 60px;
     font-family: Italiana;
@@ -211,31 +202,218 @@ main {
     margin-top: 50px;
     margin-bottom: 20px;
   }
-}
-}
-.service_title{
-  display: flex;
-  justify-content: left;
-  align-items: first baseline;
-  border-bottom:1px solid #012F4E;
-  width: 30%;
-  margin-left: -100px;
-  padding-bottom: 10px;
-  .ja_title {
-    margin-left: 10px;
-    font-size: 18px;
+  .description{
+    font-size: 16px;
+    line-height: 1.56;
+    letter-spacing: 0.005em;
   }
 }
-.skills_title{
-  display: flex;
-  justify-content: left;
-  align-items: first baseline;
-  border-bottom:1px solid #012F4E;
-  width: 27%;
-  margin-left: -100px;
-  padding-bottom: 10px;
-  .ja_title {
-    margin-left: 10px;
-    font-size: 18px;
+}
+.service{
+  .service_title{
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    border-bottom:1px solid #012F4E;
+    width: 30%;
+    margin-left: -100px;
+    padding-bottom: 10px;
+    .ja_title{
+      margin-left: 10px;
+      font-size: 18px;
+    }
+  }
+  .service_list {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    img {
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+    }
+    .service_item {
+      display: flex;
+    }
+    dt {
+      padding-bottom: 20px;
+      font-size: 18px;
+    }
+    dd {
+      padding-bottom: 60px;
+      font-size: 16px;
+    }
+  }
+  .service_announce {
+    text-align: right;
+    padding-bottom: 210px;
   }
 }
+.skills {
+  padding-bottom:280px;
+  .skills_title{
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    border-bottom:1px solid #012F4E;
+    width: 27%;
+    margin-left: -100px;
+    padding-bottom: 10px;
+    .ja_title {
+      margin-left: 10px;
+      font-size: 18px;
+    }
+  }
+  .skill_lists{
+    padding-top: 80px;
+    .skill {
+      width: 190px;
+      height: 30px;
+      background-color: #C1BCBD;
+      text-align: right;
+      padding-top: 10px;
+      padding-right: 10px;
+    }
+    .skill_block{
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 20px;
+    } 
+  }
+  .skill2{
+    width: 458px;
+    height: 30px;
+    background-color: #C1BCBD;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+  .skill_lead{
+    padding-top: 80px;
+    letter-spacing: 0.1em;
+    margin-left: 0px;
+    color: #7E8C96;
+  }
+  .TOP_works{
+    display: grid;
+    justify-content: flex-end;
+    .TOP_work{
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      margin-top: 85px;
+      width: 510px;
+      height: 265px;
+      background: url(../images/work_frame.png) center / cover;
+      img{
+        width: 290px;
+        filter: drop-shadow(-5px 5px 0px rgba(85,86,86,0.3));
+        }
+      time{
+        padding-left: 10px;
+        padding-bottom: 5px;
+        font-size: 13px;
+        font-family: Italiana;
+      }
+      p{
+        font-size: 16px;
+      }
+      .work_ctg1{
+        padding-left: 10px;
+        padding-bottom: 125px;
+      }
+      .work_ctg2{
+        padding-left: 10px;
+        padding-bottom: 65px;
+      }
+      .skill_tag{
+        text-align: right;
+        width: 110px;
+        height: 23px;
+        background-color: #C1BCBD;
+        padding-top: 4px;
+        padding-right: 4px;
+        margin-bottom: 4px;
+        margin-left: 50px;
+      }
+    }
+  }
+}
+.contact{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  .contact_btn{
+    position: relative;
+    right: -90px;
+    bottom: -100px;
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgba(38,49,101,0.7), rgba(1,47,78,1));
+    box-sizing: border-box;
+    .btn_text{
+      position:absolute;
+      top: 92px;
+      right: 52px;
+      color: #FFFFFF;
+    }
+    .btn_border{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: #FFFFFF  1px solid ;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.footer{
+  height: 322px;
+  background: linear-gradient(to bottom, #F7E3DA, #DAB4B4);
+  padding-top: 100px;
+  padding-left: 10%;
+  .footer_btn{
+    font-family: Cambay;
+    font-size: 26px;
+    color: #012F4E;
+    position: relative;
+    padding-right: 100px;
+  }
+  .footer_btn::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #012F4E;
+  }
+  .footer_btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
+    right: 15px;
+    width: 15px;
+    height: 2px;
+    background: #012F4E;
+    transition: 0.3s;
+  }
+  .footer_btn:hover::after {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #012F4E;
+    right: 7.5px;
+  }
+  .copyright{
+    margin-top: 265px;
+    padding-right: 10%;
+    text-align: right;
+  }
+}
+

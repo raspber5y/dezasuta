@@ -1,0 +1,125 @@
+@import url(../../css/common.css);
+h2 {
+  font-size: 30px;
+  letter-spacing: 0.1em;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+.about, .contact {
+  width: 73%;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+}
+header .header_wrap {
+  position: absolute;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 40px;
+}
+header .header_wrap .emiuno_logo {
+  width: 58px;
+}
+header img {
+  width: 100%;
+}
+
+.about {
+  padding-top: 70px;
+}
+.about .about_title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 80px;
+  margin-left: -12%;
+}
+.about .title {
+  padding-left: 10px;
+}
+.about .title_shape {
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #012F4E;
+  border-right: 1px solid #012F4E;
+  transform: translate(-50%, 0) rotate(45deg);
+}
+.about .about_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.about .about_wrap .about_pic {
+  width: 28%;
+}
+.about .about_wrap .about_pic img {
+  width: 100%;
+  padding-top: 38px;
+}
+.about .about_wrap .about_left {
+  width: 33%;
+}
+.about .about_wrap .about_left .left_title {
+  display: flex;
+  align-items: baseline;
+  font-family: Cambay;
+  font-size: 24px;
+}
+.about .about_wrap .about_left .left_title time {
+  padding-left: 10px;
+}
+.about .about_wrap .about_left .left_content {
+  padding-top: 40px;
+}
+.about .about_wrap .about_left .left_content p {
+  font-size: 14px;
+  padding-bottom: 30px;
+  line-height: 1.78;
+}
+.about .about_wrap .about_right {
+  width: 30%;
+}
+.about .about_wrap .about_right .right_title {
+  display: flex;
+  align-items: baseline;
+  border-bottom: 1px solid #012F4E;
+  padding-bottom: 10px;
+}
+.about .about_wrap .about_right .right_title .ja_title {
+  margin-left: 10px;
+  font-size: 15px;
+}
+.about .about_wrap .about_right ul {
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.about .about_wrap .about_right ul li {
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 10px;
+}
+.about .about_wrap .about_right ul li time {
+  padding-right: 10px;
+}
+.about .about_wrap .about_right .vision_content {
+  padding-top: 10px;
+}
+.about .about_wrap .about_right .vision_content p {
+  font-size: 14px;
+  line-height: 1.78;
+  letter-spacing: 0.05em;
+  padding-bottom: 30px;
+}
+
+.contact h2 {
+  font-size: 50px;
+  margin-left: -12%;
+  color: #012F4E;
+}/*# sourceMappingURL=style.css.map */
