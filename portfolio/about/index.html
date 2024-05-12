@@ -5,10 +5,20 @@
     <meta name="description" content="unoemiについて">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header id="header">
+        <nav class="pc_nav">
+            <h4>menu</h4>
+            <ul>
+                <li><a href="../index.html" class="menu_btn">top</a></li>
+                <li><a href="#headr" class="menu_btn">about</a></li>
+                <li><a href="./works/" class="menu_btn">works</a></li>
+                <li><a href="./contact/" class="menu_btn">contact</a></li>
+            </ul>
+        </nav>
         <div class="header_wrap">
             <div>
                 <h1>
@@ -18,15 +28,6 @@
             <div class="pc_btn">menu<span></span></div>
         </div>
         <img src="../images/sub_header.png" alt="右上から左下に光が指す画像">
-        <!-- <nav class="pc_nav">
-            <h4>MENU</h4>
-            <ul>
-                <li><a href="#top">top</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#works">works</a></li>
-                <li><a href="#contact">contact</a></li>
-            </ul>
-        </nav> -->
     </header>
     <main>
         <article class="about">
@@ -95,18 +96,26 @@
         <section class="contact">
             <h2>Feel free to contact.</h2>
             <div class="contact_btn">
-                <a class="btn_text">お問い合わせ</a>
+                <a href="../contact/contact.html" class="btn_text">お問い合わせ</a>
                 <div class="btn_border"></div>
             </div>
         </section>
     </main>
     <footer class="footer">
-        <a href="" class="footer_btn">top</a>
-        <a href="" class="footer_btn">about</a>
-        <a href="" class="footer_btn">works</a>
-        <a href="" class="footer_btn">contact</a>
+        <a href="../index.html" class="footer_btn">top</a>
+        <a href="#headr" class="footer_btn">about</a>
+        <a href="../works/" class="footer_btn">works</a>
+        <a href="../contact/contact.html" class="footer_btn">contact</a>
         <div class="copyright">
             <p>© 2024 uno emi</p>
         </div>
     </footer>
+    <script>
+        $(function () {
+            $('.pc_btn,.pc_nav').on('click', function () {
+                $('.pc_btn').toggleClass('open')
+                $('.pc_nav').fadeToggle();
+            })
+        });
+    </script>
 </body>

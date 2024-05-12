@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import url(common.css);
+@use "./_common.scss";
 
 h2 {
   font-size: 50px;
@@ -11,6 +11,7 @@ h3 {
   font-size: 40px;
 }
 h4 {
+  color: #ffffff;
   font-size: 30px;
 }
 h5 {
@@ -18,13 +19,16 @@ h5 {
   letter-spacing: 0.1em;
 }
 
-
-.top_concept, .philosofhy, .service, .skills, .contact {
+.top_concept,
+.philosofhy,
+.service,
+.skills,
+.contact {
   width: 73%;
   margin: 0 auto;
 }
 
-.mv_wrap{
+.mv_wrap {
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -39,38 +43,45 @@ h5 {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    p {font-family: Italiana;}   
-    .message_v,.message_v2{
+    p {
+      font-family: Italiana;
+    }
+    .message_v,
+    .message_v2 {
       font-size: 71px;
       letter-spacing: 0.092em;
     }
-    .message_ob,.message_ob2{
+    .message_ob,
+    .message_ob2 {
       font-size: 50px;
       letter-spacing: 0.1em;
     }
-    .message_v{
+    .message_v {
       text-align: right;
     }
-    .message_v2,.message_ob2{
+    .message_v2,
+    .message_ob2 {
       text-align: left;
     }
   }
-  .scrolldown{
-    position:absolute;
-    left:13%;
-    bottom:10px;
-    height:120px;}
-  .scrolldown span{
+  .scrolldown {
+    position: absolute;
+    left: 13%;
+    bottom: 10px;
+    height: 120px;
+  }
+  .scrolldown span {
     /*描画位置*/
     position: absolute;
-    left:-35px;
-    top:-30px;
+    left: -35px;
+    top: -30px;
     /*テキストの形状*/
-    color: #012F4E;
+    color: #012f4e;
     font-family: Cambay;
     font-size: 1.8rem;
-    letter-spacing: 0.05em;}
-  .scrolldown::after{
+    letter-spacing: 0.05em;
+  }
+  .scrolldown::after {
     content: "";
     /*描画位置*/
     position: absolute;
@@ -78,40 +89,40 @@ h5 {
     /*線の形状*/
     width: 1px;
     height: 120px;
-    background: #012F4E;
+    background: #012f4e;
     /*線の動き1.4秒かけて動く。永遠にループ*/
     animation: pathmove 1.4s ease-in-out infinite;
-    opacity:0;
+    opacity: 0;
   }
-  @keyframes pathmove{
-    0%{
-      height:0;
-      top:0;
+  @keyframes pathmove {
+    0% {
+      height: 0;
+      top: 0;
       opacity: 0;
     }
-    30%{
-      height:70px;
+    30% {
+      height: 70px;
       opacity: 1;
     }
-    100%{
-      height:0;
-      top:115px;
+    100% {
+      height: 0;
+      top: 115px;
       opacity: 0;
     }
   }
-  .header_wrap{
+  .header_wrap {
     align-items: center;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 30px;
-    .emiuno_logo{
+    .emiuno_logo {
       width: 58px;
     }
   }
 }
-.top_concept{
+.top_concept {
   padding-top: 70px;
   padding-bottom: 135px;
   .concept {
@@ -119,9 +130,11 @@ h5 {
     display: grid;
     justify-content: flex-end;
     margin-bottom: 80px;
-    letter-spacing:0.06em;
-    p{line-height: 2.18;}
-    .concept_1{
+    letter-spacing: 0.06em;
+    p {
+      line-height: 2.18;
+    }
+    .concept_1 {
       padding-bottom: 50px;
     }
   }
@@ -131,7 +144,7 @@ h5 {
   font-family: Cambay;
   font-size: 25px;
   margin-top: 50px;
-  display: grid;
+  display: flex;
   justify-content: flex-end;
   position: relative;
   padding-right: 40px;
@@ -163,14 +176,14 @@ h5 {
   height: 10px;
   border-radius: 50%;
   background: #012f4e;
-  right: 7.5px;
+  right: 7px;
 }
 
-.philosofhy_title{
+.philosofhy_title {
   display: flex;
   justify-content: left;
   align-items: first baseline;
-  border-bottom:1px solid #012F4E;
+  border-bottom: 1px solid #012f4e;
   width: 37%;
   margin-left: -100px;
   padding-bottom: 20px;
@@ -182,43 +195,44 @@ h5 {
 .philosophy_items {
   display: flex;
   justify-content: space-between;
-.philosophy_item {
-  width: 30%;
-  padding-top: 108px;
-  padding-bottom: 240px;
-  .number{
-    font-size: 60px;
-    font-family: Italiana;
-    margin-bottom: -25px;
-    text-align: right;
-    z-index: 2;
-  }
-  img{
-    width: 100%;
-    z-index: 1;
-  }
-  .title{
-    font-size: 18px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-  }
-  .description{
-    font-size: 16px;
-    line-height: 1.56;
-    letter-spacing: 0.005em;
+  .philosophy_item {
+    width: 30%;
+    padding-top: 108px;
+    padding-bottom: 240px;
+    .number {
+      position: relative;
+      font-size: 60px;
+      font-family: Italiana;
+      margin-bottom: -25px;
+      text-align: right;
+      z-index: 2;
+    }
+    img {
+      width: 100%;
+      z-index: 1;
+    }
+    .title {
+      font-size: 18px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+    .description {
+      font-size: 16px;
+      line-height: 1.56;
+      letter-spacing: 0.005em;
+    }
   }
 }
-}
-.service{
-  .service_title{
+.service {
+  .service_title {
     display: flex;
     justify-content: left;
     align-items: baseline;
-    border-bottom:1px solid #012F4E;
+    border-bottom: 1px solid #012f4e;
     width: 30%;
     margin-left: -100px;
     padding-bottom: 10px;
-    .ja_title{
+    .ja_title {
       margin-left: 10px;
       font-size: 18px;
     }
@@ -249,100 +263,102 @@ h5 {
   }
 }
 .skills {
-  padding-bottom:280px;
-  .skills_title{
-    display: flex;
-    justify-content: left;
-    align-items: baseline;
-    border-bottom:1px solid #012F4E;
-    width: 27%;
-    margin-left: -100px;
-    padding-bottom: 10px;
-    .ja_title {
-      margin-left: 10px;
-      font-size: 18px;
-    }
+  padding-bottom: 280px;
+}
+
+.skills_title {
+  display: flex;
+  justify-content: left;
+  align-items: baseline;
+  border-bottom: 1px solid #012f4e;
+  width: 27%;
+  margin-left: -100px;
+  padding-bottom: 10px;
+  .ja_title {
+    margin-left: 10px;
+    font-size: 18px;
   }
-  .skill_lists{
-    padding-top: 80px;
-    .skill {
-      width: 190px;
-      height: 30px;
-      background-color: #C1BCBD;
-      text-align: right;
-      padding-top: 10px;
-      padding-right: 10px;
-    }
-    .skill_block{
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 20px;
-    } 
-  }
-  .skill2{
-    width: 458px;
+}
+.skill_lists {
+  padding-top: 80px;
+  .skill {
+    width: 190px;
     height: 30px;
-    background-color: #C1BCBD;
+    background-color: #c1bcbd;
     text-align: right;
     padding-top: 10px;
     padding-right: 10px;
   }
-  .skill_lead{
-    padding-top: 80px;
-    letter-spacing: 0.1em;
-    margin-left: 0px;
-    color: #7E8C96;
+  .skill_block {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
   }
-  .TOP_works{
-    display: grid;
-    justify-content: flex-end;
-    .TOP_work{
-      display: flex;
-      justify-content:center;
-      align-items: center;
-      margin-top: 85px;
-      width: 510px;
-      height: 265px;
-      background: url(../images/work_frame.png) center / cover;
-      img{
-        width: 290px;
-        filter: drop-shadow(-5px 5px 0px rgba(85,86,86,0.3));
-        }
-      time{
-        padding-left: 10px;
-        padding-bottom: 5px;
-        font-size: 13px;
-        font-family: Italiana;
-      }
-      p{
-        font-size: 16px;
-      }
-      .work_ctg1{
-        padding-left: 10px;
-        padding-bottom: 125px;
-      }
-      .work_ctg2{
-        padding-left: 10px;
-        padding-bottom: 65px;
-      }
-      .skill_tag{
-        text-align: right;
-        width: 110px;
-        height: 23px;
-        background-color: #C1BCBD;
-        padding-top: 4px;
-        padding-right: 4px;
-        margin-bottom: 4px;
-        margin-left: 50px;
-      }
+}
+.skill2 {
+  width: 458px;
+  height: 30px;
+  background-color: #c1bcbd;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.skill_lead {
+  padding-top: 80px;
+  letter-spacing: 0.1em;
+  margin-left: 0px;
+  color: #7e8c96;
+}
+.TOP_works {
+  display: grid;
+  justify-content: flex-end;
+  .TOP_work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 85px;
+    width: 510px;
+    height: 265px;
+    background: url(../images/work_frame.png) center / cover;
+    img {
+      width: 290px;
+      filter: drop-shadow(-5px 5px 0px rgba(85, 86, 86, 0.3));
+    }
+    time {
+      padding-left: 10px;
+      padding-bottom: 5px;
+      font-size: 13px;
+      font-family: Italiana;
+    }
+    p {
+      font-size: 16px;
+    }
+    .work_ctg1 {
+      padding-left: 10px;
+      padding-bottom: 125px;
+    }
+    .work_ctg2 {
+      padding-left: 10px;
+      padding-bottom: 65px;
+    }
+    .skill_tag {
+      text-align: right;
+      width: 110px;
+      height: 23px;
+      background-color: #c1bcbd;
+      padding-top: 4px;
+      padding-right: 4px;
+      margin-bottom: 4px;
+      margin-left: 50px;
     }
   }
 }
-.contact{
+
+.contact {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  .contact_btn{
+  .contact_btn {
     position: relative;
     right: -90px;
     bottom: -100px;
@@ -350,70 +366,24 @@ h5 {
     height: 200px;
     padding: 15px;
     border-radius: 50%;
-    background: linear-gradient(to bottom, rgba(38,49,101,0.7), rgba(1,47,78,1));
+    background: linear-gradient(
+      to bottom,
+      rgba(38, 49, 101, 0.7),
+      rgba(1, 47, 78, 1)
+    );
     box-sizing: border-box;
-    .btn_text{
-      position:absolute;
+    .btn_text {
+      position: absolute;
       top: 92px;
       right: 52px;
-      color: #FFFFFF;
+      color: #ffffff;
     }
-    .btn_border{
+    .btn_border {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      border: #FFFFFF  1px solid ;
+      border: #ffffff 1px solid;
       box-sizing: border-box;
     }
   }
 }
-
-.footer{
-  height: 322px;
-  background: linear-gradient(to bottom, #F7E3DA, #DAB4B4);
-  padding-top: 100px;
-  padding-left: 10%;
-  .footer_btn{
-    font-family: Cambay;
-    font-size: 26px;
-    color: #012F4E;
-    position: relative;
-    padding-right: 100px;
-  }
-  .footer_btn::before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -40px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid #012F4E;
-  }
-  .footer_btn::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -25px;
-    transform: translateY(-50%);
-    right: 15px;
-    width: 15px;
-    height: 2px;
-    background: #012F4E;
-    transition: 0.3s;
-  }
-  .footer_btn:hover::after {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #012F4E;
-    right: 7.5px;
-  }
-  .copyright{
-    margin-top: 265px;
-    padding-right: 10%;
-    text-align: right;
-  }
-}
-

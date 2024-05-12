@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+@use "../../css/common";
+
+h2 {
+  font-size: 30px;
+  letter-spacing: 0.1em;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.contact,
+.toTOP {
+  width: 73%;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  .header_wrap {
+    position: absolute;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px;
+    .emiuno_logo {
+      width: 58px;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.form_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact_title {
+  display: flex;
+  align-items: center;
+  margin-left: -12%;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  .title {
+    padding-left: 10px;
+  }
+  .title_shape {
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #012f4e;
+    border-right: 1px solid #012f4e;
+    transform: translate(-50%, 0) rotate(45deg);
+  }
+}
+
+.form_lead {
+  width: 40%;
+  font-size: 15px;
+  .lead_text {
+    line-height: 1.74;
+  }
+  .mailaddress {
+    display: flex;
+    padding-top: 90px;
+    padding-bottom: 10px;
+    img {
+      width: 18px;
+      padding-right: 10px;
+    }
+  }
+}
+
+.form {
+  width: 42%;
+  .question {
+    font-size: 15px;
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    align-items: center;
+    margin-left: -30px;
+  }
+  .question::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 1px solid #012f4e;
+  }
+  .question::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    left: 11px;
+    width: 9px;
+    height: 1px;
+    background: #012f4e;
+  }
+  .answerbox {
+    display: block;
+    width: 100%;
+    height: 36px;
+    color: #012f4e;
+    padding: 10px;
+    background: #c1bcbd;
+    border: none;
+    margin-bottom: 30px;
+  }
+  textarea {
+    width: 100%;
+    height: 290px;
+    color: #012f4e;
+    padding: 10px;
+    background: #c1bcbd;
+    border: none;
+    margin-bottom: 30px;
+  }
+  button {
+    width: 76px;
+    height: 42px;
+    background: #faede8;
+    border: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 140px;
+    filter: drop-shadow(-5px 5px 0px rgba(85, 86, 86, 0.3));
+  }
+}
+
+// チェックボックス
+.form_checkmark {
+  display: block;
+  position: relative;
+  margin-top: 10px;
+  padding-left: 28px;
+  margin-bottom: 70px;
+}
+
+.form_checkmark input {
+  display: none;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 13px;
+  width: 13px;
+  border: solid 1px #012f4e;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  &:after {
+    content: "";
+    position: absolute;
+    border: solid #faede8;
+    border-width: 0 2px 2px 0;
+    left: 3px;
+    top: 0px;
+    width: 3px;
+    height: 6px;
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+}
+.form_checkmark {
+  input:checked + .checkmark {
+    background: #012f4e;
+    border-color: #012f4e;
+  }
+
+  input:checked + .checkmark:after {
+    opacity: 1;
+  }
+}
+
+// プレイスホルダー
+textarea::placeholder {
+  color: #012f4e;
+  opacity: 0.5;
+}
+
+.toTOP {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: -8px;
+  h2 {
+    font-size: 50px;
+    margin-left: -12%;
+    color: #012f4e;
+  }
+  .contact_btn {
+    position: relative;
+    right: -90px;
+    bottom: -120px;
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    border-radius: 50%;
+    background: linear-gradient(
+      to bottom,
+      rgba(38, 49, 101, 0.7),
+      rgb(1, 47, 78)
+    );
+    .btn_border {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: #ffffff 1px solid;
+      box-sizing: border-box;
+    }
+    .btn_text {
+      display: inline;
+      position: absolute;
+      top: 100px;
+      right: 70px;
+      color: #ffffff;
+      .btn_text_en {
+        font-family: Cambay;
+        font-size: 22px;
+      }
+    }
+  }
+}
