@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+@use "../../css/common";
+
+h2 {
+  font-size: 30px;
+  letter-spacing: 0.1em;
+}
+
+h3 {
+  font-size: 16px;
+  font-family: Cambay;
+  color: #ffffff;
+}
+
+h4 {
+  color: #ffffff;
+  font-size: 30px;
+}
+.works,
+.contact {
+  width: 73%;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  .header_wrap {
+    position: absolute;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px;
+    .emiuno_logo {
+      width: 58px;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.works {
+  padding-top: 70px;
+}
+
+.works_title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 80px;
+  margin-left: -12%;
+}
+.title {
+  padding-left: 10px;
+}
+.title_shape {
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #012f4e;
+  border-right: 1px solid #012f4e;
+  transform: translate(-50%, 0) rotate(45deg);
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: -8px;
+  h2 {
+    font-size: 50px;
+    margin-left: -12%;
+    color: #012f4e;
+  }
+  .contact_btn {
+    position: relative;
+    right: -90px;
+    bottom: -100px;
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    border-radius: 50%;
+    background: linear-gradient(
+      to bottom,
+      rgba(38, 49, 101, 0.7),
+      rgb(1, 47, 78)
+    );
+    box-sizing: border-box;
+    .btn_text {
+      position: absolute;
+      top: 92px;
+      right: 52px;
+      color: #ffffff;
+    }
+    .btn_border {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: #ffffff 1px solid;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.sort_tags {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 80px;
+  li {
+    position: relative;
+    padding-right: 40px;
+    img {
+      width: 15px;
+      padding-right: 8px;
+      margin-bottom: -1px;
+    }
+  }
+}
+
+.sort_tags li::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20%;
+  width: 30%;
+  height: 1px;
+  background: #012f4e;
+  transition: all 0.3s;
+  transform: scale(0, 1);
+  transform-origin: center top;
+}
+.sort_tags li:hover::after {
+  transform: scale(1, 1);
+}
+
+.works_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.caption {
+  font-size: 15px;
+  text-align: left;
+  padding: 14% 10%;
+  .caption_content {
+    display: flex;
+    padding-top: 10%;
+    .caption_title {
+      margin-right: 30px;
+    }
+    p {
+      color: #ffffff;
+      display: block;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+// マスク
+.work_wrap {
+  overflow: hidden;
+  position: relative;
+  width: 43%;
+  margin-bottom: 80px;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      filter: drop-shadow(-10px 10px 0px rgba(85, 86, 86, 0.3));
+    }
+  }
+}
+.mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: #012f4e;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.mask:hover {
+  opacity: 0.9;
+}
