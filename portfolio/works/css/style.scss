@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @use "../../css/common";
+@use "./work1";
 
 h2 {
   font-size: 30px;
@@ -17,6 +18,7 @@ h4 {
   color: #ffffff;
   font-size: 30px;
 }
+
 .works,
 .contact {
   width: 73%;
@@ -169,6 +171,8 @@ header {
     height: 100%;
     img {
       width: 100%;
+      margin-left: 10px;
+      margin-bottom: 10px;
       filter: drop-shadow(-10px 10px 0px rgba(85, 86, 86, 0.3));
     }
   }
