@@ -47,17 +47,17 @@ h5 {
 
 main {
   background: linear-gradient(to bottom, #f7e3da, #dab4b4);
-  width: 100vw;
 }
 
 .pc_nav {
   display: none;
-  background: #012f4e;
-  opacity: 0.7;
+  position: absolute;
+  background: rgba(1, 47, 78, 0.8);
   width: 100%;
   height: 100vh;
   padding-left: 13%;
   padding-top: 200px;
+  z-index: 98;
 }
 .pc_nav h4 {
   width: 40px;
@@ -110,6 +110,7 @@ main {
   color: #ffffff;
   position: relative;
   padding-right: 40px;
+  z-index: 99;
 }
 
 .pc_btn::before {
@@ -148,9 +149,10 @@ main {
   border-radius: 0%;
   top: 10px;
   width: 25px;
-  right: -15px;
+  right: 0px;
   height: 0px;
   transform: rotate(45deg);
+  background: #ffffff;
 }
 
 .pc_btn.open::after {
@@ -158,7 +160,7 @@ main {
   width: 25px;
   height: 0px;
   top: 10px;
-  right: -15px;
+  right: 0px;
   border: 2px solid #ffffff;
   transform: rotate(135deg);
 }
@@ -585,11 +587,12 @@ h5 {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  margin-bottom: -8px;
 }
 .contact .contact_btn {
   position: relative;
   right: -90px;
-  bottom: -100px;
+  bottom: -93px;
   width: 200px;
   height: 200px;
   padding: 15px;
@@ -599,8 +602,9 @@ h5 {
 }
 .contact .contact_btn .btn_text {
   position: absolute;
-  top: 92px;
-  right: 52px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #ffffff;
 }
 .contact .contact_btn .btn_border {

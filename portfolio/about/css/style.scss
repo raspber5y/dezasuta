@@ -139,7 +139,7 @@ header {
   .contact_btn {
     position: relative;
     right: -90px;
-    bottom: -100px;
+    bottom: -93px;
     width: 200px;
     height: 200px;
     padding: 15px;
@@ -152,8 +152,9 @@ header {
     box-sizing: border-box;
     .btn_text {
       position: absolute;
-      top: 92px;
-      right: 52px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       color: #ffffff;
     }
     .btn_border {

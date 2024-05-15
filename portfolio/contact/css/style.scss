@@ -122,6 +122,7 @@ header {
     background: #c1bcbd;
     border: none;
     margin-bottom: 30px;
+    box-sizing: border-box;
   }
   textarea {
     width: 100%;
@@ -131,6 +132,7 @@ header {
     background: #c1bcbd;
     border: none;
     margin-bottom: 30px;
+    box-sizing: border-box;
   }
   button {
     width: 76px;
@@ -214,7 +216,7 @@ textarea::placeholder {
   .contact_btn {
     position: relative;
     right: -90px;
-    bottom: -120px;
+    bottom: -143px;
     width: 200px;
     height: 200px;
     padding: 15px;
@@ -224,6 +226,7 @@ textarea::placeholder {
       rgba(38, 49, 101, 0.7),
       rgb(1, 47, 78)
     );
+    box-sizing: border-box;
     .btn_border {
       width: 100%;
       height: 100%;
@@ -234,8 +237,9 @@ textarea::placeholder {
     .btn_text {
       display: inline;
       position: absolute;
-      top: 100px;
-      right: 70px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       color: #ffffff;
       .btn_text_en {
         font-family: Cambay;

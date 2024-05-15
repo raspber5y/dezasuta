@@ -1,0 +1,38 @@
+.preview {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 140px;
+}
+
+.pc_preview {
+  width: 58%;
+  .pc_img {
+    width: 100%;
+    height: 363px;
+    overflow-y: scroll;
+  }
+}
+
+.pc_icon,
+.sp_icon {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  .pc_icon_img {
+    width: 37px;
+    margin-right: 10px;
+  }
+  .sp_icon_img {
+    width: 15px;
+    margin-right: 10px;
+  }
+}
+
+.sp_preview {
+  width: 20%;
+  .sp_img {
+    width: 100%;
+    height: 363px;
+    overflow-y: scroll;
+  }
+}

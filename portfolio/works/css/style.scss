@@ -2,6 +2,7 @@
 
 @use "../../css/common";
 @use "./work1";
+@use "./work3";
 
 h2 {
   font-size: 30px;
@@ -78,7 +79,7 @@ header {
   .contact_btn {
     position: relative;
     right: -90px;
-    bottom: -100px;
+    bottom: -93px;
     width: 200px;
     height: 200px;
     padding: 15px;
@@ -91,8 +92,9 @@ header {
     box-sizing: border-box;
     .btn_text {
       position: absolute;
-      top: 92px;
-      right: 52px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       color: #ffffff;
     }
     .btn_border {
@@ -112,14 +114,23 @@ header {
   li {
     position: relative;
     padding-right: 40px;
+    cursor: pointer;
     img {
       width: 15px;
       padding-right: 8px;
       margin-bottom: -1px;
     }
+    .icon-active {
+      display: none;
+    }
+    &.is-active .icon-inactive {
+      display: none;
+    }
+    &.is-active .icon-active {
+      display: inline;
+    }
   }
 }
-
 .sort_tags li::after {
   content: "";
   position: absolute;
