@@ -43,7 +43,7 @@ h5 {
     padding-bottom: 25px;
   }
   .work_intro {
-    padding-bottom: 90px;
+    padding-bottom: 80px;
   }
   .work_content {
     display: flex;
@@ -142,17 +142,18 @@ h5 {
       font-size: 15px;
     }
   }
-  .overview,
-  .point {
+  .overview {
     font-size: 13px;
     line-height: 1.53;
   }
   .info_point {
-    padding-top: 32px;
+    padding-top: 80px;
     .point_text {
       position: relative;
       padding-left: 5%;
       padding-bottom: 10px;
+      font-size: 13px;
+      line-height: 1.53;
     }
     .point_text::before {
       content: "";

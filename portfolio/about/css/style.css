@@ -249,7 +249,7 @@ header .header_wrap {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 40px;
+  padding: 3%;
 }
 header .header_wrap .emiuno_logo {
   width: 58px;

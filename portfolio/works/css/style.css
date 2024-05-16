@@ -266,7 +266,7 @@ h5 {
   padding-bottom: 25px;
 }
 .left_group .work_intro {
-  padding-bottom: 90px;
+  padding-bottom: 80px;
 }
 .left_group .work_content {
   display: flex;
@@ -342,18 +342,19 @@ h5 {
   margin-left: 10px;
   font-size: 15px;
 }
-.right_group .overview,
-.right_group .point {
+.right_group .overview {
   font-size: 13px;
   line-height: 1.53;
 }
 .right_group .info_point {
-  padding-top: 32px;
+  padding-top: 80px;
 }
 .right_group .info_point .point_text {
   position: relative;
   padding-left: 5%;
   padding-bottom: 10px;
+  font-size: 13px;
+  line-height: 1.53;
 }
 .right_group .info_point .point_text::before {
   content: "";
@@ -546,8 +547,19 @@ h5 {
 .pc_preview .pc_img {
   width: 100%;
   height: 363px;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 0px 5px;
   overflow-y: scroll;
+}
+.pc_preview .pc_img::-webkit-scrollbar {
+  width: 10px;
+}
+.pc_preview .pc_img::-webkit-scrollbar-track {
+  background-color: #f7e3da;
+  border-radius: 0px 0px 5px 0px;
+}
+.pc_preview .pc_img::-webkit-scrollbar-thumb {
+  background-color: #c1bcbd;
+  border-radius: 8px;
 }
 
 .pc_icon,
@@ -568,22 +580,30 @@ h5 {
 }
 
 .sp_preview {
-  width: 20%;
+  width: 24%;
 }
 .sp_preview .sp_dum {
-  width: 7px;
-  height: 7px;
-  background: #6e889a;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  border-radius: 50%;
+  width: 100%;
+  height: 15px;
+  background: #012f4e;
+  border-radius: 5px 5px 0px 0px;
 }
 .sp_preview .sp_img {
   width: 100%;
   height: 363px;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 0px 5px;
   overflow-y: scroll;
+}
+.sp_preview .sp_img::-webkit-scrollbar {
+  width: 10px;
+}
+.sp_preview .sp_img::-webkit-scrollbar-track {
+  background-color: #f7e3da;
+  border-radius: 0px 0px 5px 0px;
+}
+.sp_preview .sp_img::-webkit-scrollbar-thumb {
+  background-color: #c1bcbd;
+  border-radius: 8px;
 }
 
 h2 {
@@ -618,7 +638,7 @@ header .header_wrap {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 40px;
+  padding: 3%;
 }
 header .header_wrap .emiuno_logo {
   width: 58px;

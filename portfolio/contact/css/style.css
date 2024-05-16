@@ -249,7 +249,7 @@ header .header_wrap {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 40px;
+  padding: 3%;
 }
 header .header_wrap .emiuno_logo {
   width: 58px;
@@ -434,7 +434,7 @@ textarea::placeholder {
 .toTOP .contact_btn {
   position: relative;
   right: -90px;
-  bottom: -143px;
+  bottom: -93px;
   width: 200px;
   height: 200px;
   padding: 15px;
@@ -460,4 +460,23 @@ textarea::placeholder {
 .toTOP .contact_btn .btn_text .btn_text_en {
   font-family: Cambay;
   font-size: 22px;
+}
+
+.thanks_wrap {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.thanks_wrap .bluerose {
+  width: 6%;
+  margin-bottom: 70px;
+}
+.thanks_wrap p {
+  font-size: 15px;
+  line-height: 1.73;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.thanks_wrap .mail_icon {
+  width: 2%;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */

@@ -31,7 +31,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 40px;
+    padding: 3%;
     .emiuno_logo {
       width: 58px;
     }
@@ -216,7 +216,7 @@ textarea::placeholder {
   .contact_btn {
     position: relative;
     right: -90px;
-    bottom: -143px;
+    bottom: -93px;
     width: 200px;
     height: 200px;
     padding: 15px;
@@ -246,5 +246,25 @@ textarea::placeholder {
         font-size: 22px;
       }
     }
+  }
+}
+
+// サンクスページ
+.thanks_wrap {
+  text-align: center;
+  margin-bottom: 80px;
+  .bluerose {
+    width: 6%;
+    margin-bottom: 70px;
+  }
+  p {
+    font-size: 15px;
+    line-height: 1.73;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .mail_icon {
+    width: 2%;
+    margin-bottom: 20px;
   }
 }

@@ -58,7 +58,7 @@
                 </div>
                 <form class="form"
                     action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfgSVaRmhm3fBNMXqlmcVHGvfRcP3DiHkFyuD6LXqJanEYRDA/formResponse"
-                    action="thanks.html">
+                    method="post" target="hidden_iframe" onsubmit="submitted=true;">
                     <label class="question">氏名、担当者名</label>
                     <input class="answerbox" type="text" placeholder="" name="entry.1595783415" required>
                     <label class="question" for="">組織名、会社名</label>
@@ -75,6 +75,9 @@
                     </label>
                     <button type="submit">送信</button>
                 </form>
+                <script type="text/javascript">var submitted = false;</script>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                    onload="if(submitted){window.location='（file:///Users/emi/Library/Mobile%20Documents/com~apple~CloudDocs/%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%B9%E3%82%BF/%E3%82%B3%E3%83%BC%E3%83%86%E3%82%99%E3%82%A3%E3%83%B3%E3%82%AF%E3%82%99/dezasuta/portfolio/contact/thanks.html）';}"></iframe>
             </div>
         </section>
         <section class="toTOP">
