@@ -37,14 +37,6 @@ ul {
   list-style: none;
 }
 
-h2,
-h3,
-h4,
-h5 {
-  font-family: Italiana;
-  font-weight: normal;
-}
-
 main {
   background: linear-gradient(to bottom, #f7e3da, #dab4b4);
 }
@@ -220,15 +212,21 @@ main {
 }
 
 h2 {
+  font-family: Italiana;
+  font-weight: normal;
   font-size: 30px;
   letter-spacing: 0.1em;
 }
 
 h3 {
+  font-family: Italiana;
+  font-weight: normal;
   font-size: 25px;
 }
 
 h4 {
+  font-family: Italiana;
+  font-weight: normal;
   color: #ffffff;
   font-size: 30px;
 }
@@ -302,7 +300,7 @@ header img {
   font-family: Cambay;
   font-size: 24px;
 }
-.about_left .left_title time {
+.about_left .left_title span {
   padding-left: 10px;
 }
 .about_left .left_content {
@@ -337,7 +335,7 @@ header img {
   align-items: baseline;
   padding-bottom: 10px;
 }
-.about_right ul li time {
+.about_right ul li span {
   padding-right: 10px;
 }
 .about_right .vision_content {
@@ -356,10 +354,13 @@ header img {
   align-items: baseline;
   margin-bottom: -8px;
 }
-.contact h2 {
+.contact .hope {
+  font-family: Italiana;
+  font-weight: normal;
   font-size: 50px;
   margin-left: -12%;
   color: #012f4e;
+  letter-spacing: 0.1em;
 }
 .contact .contact_btn {
   position: relative;

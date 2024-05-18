@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about unoemi</title>
     <meta name="description" content="unoemiについて">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -44,7 +43,7 @@
                 <div class="about_left">
                     <div class="left_title">
                         <p>UNO EMI</p>
-                        <time>1998.02</time>
+                        <span>1998.02</span>
                     </div>
                     <div class="left_content">
                         <p>奈良県生駒市出身、大阪市在住。</p>
@@ -64,15 +63,15 @@
                     </div>
                     <ul>
                         <li>
-                            <time>2020.03</time>
+                            <span>2020.03</span>
                             <p>龍谷大学国際学部を卒業</p>
                         </li>
                         <li>
-                            <time>2020.04</time>
+                            <span>2020.04</span>
                             <p>インテリア業界BtoB営業職に就職</p>
                         </li>
                         <li>
-                            <time>2024.04</time>
+                            <span>2024.04</span>
                             <p>WEBデザイナーとして転身を決意</p>
                         </li>
                     </ul>
@@ -98,13 +97,13 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
-            <h2>Feel free to contact.</h2>
-            <div class="contact_btn">
-                <a href="../contact/contact.html" class="btn_text">お問い合わせ</a>
+        <div class="contact">
+            <p class="hope">Feel free to contact.</p>
+            <a href="../contact/contact.html" class="contact_btn">
+                <div class="btn_text">お問い合わせ</div>
                 <div class="btn_border"></div>
-            </div>
-        </section>
+            </a>
+        </div>
     </main>
     <footer class="footer">
         <a href="../index.html" class="footer_btn">top</a>
@@ -115,14 +114,7 @@
             <p>© 2024 uno emi</p>
         </div>
     </footer>
-    <script>
-        $(function () {
-            $('.pc_btn,.pc_nav').on('click', function () {
-                $('.pc_btn').toggleClass('open')
-                $('.pc_nav').fadeToggle();
-            })
-        });
-    </script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

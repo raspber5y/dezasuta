@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>unoemi|contact|thanks</title>
+    <title>unoemi | contact | thanks</title>
     <meta name="description" content="unoemiへのお問い合わせを送付完了">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -35,7 +34,7 @@
         <img src="../images/sub_header.png" alt="右上から左下に光が指す画像">
     </header>
     <main>
-        <section class="contact">
+        <div class="contact">
             <div class="contact_title">
                 <div class="title_shape"></div>
                 <h2 class="title">Thank you.</h2>
@@ -53,17 +52,17 @@
                 <img class="mail_icon" src="../images/mail_icon.png" alt="メールのアイコン">
                 <address>emiuno_design@gmail.com</address>
             </div>
-        </section>
-        <section class="toTOP">
-            <h2>Wish your happiness.</h2>
-            <div class="contact_btn">
-                <div class="btn_text">
-                    <a href="../index.html" class="btn_text_en">TOP</a>
-                    <a>へ戻る</a>
-                </div>
-                <div class="btn_border"></div>
+            <div class="totop">
+                <p class="hope">Wish your happiness.</p>
+                <a href="../index.html" class="contact_btn">
+                    <div class="btn_text">
+                        <div class="btn_text_en">TOP</div>
+                        <div>へ戻る</div>
+                    </div>
+                    <div class="btn_border"></div>
+                </a>
             </div>
-        </section>
+        </div>
     </main>
     <footer class="footer">
         <a href="../index.html" class="footer_btn">top</a>
@@ -74,14 +73,7 @@
             <p>© 2024 uno emi</p>
         </div>
     </footer>
-    <script>
-        $(function () {
-            $('.pc_btn,.pc_nav').on('click', function () {
-                $('.pc_btn').toggleClass('open')
-                $('.pc_nav').fadeToggle();
-            })
-        });
-    </script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

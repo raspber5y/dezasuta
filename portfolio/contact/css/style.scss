@@ -5,10 +5,8 @@
 h2 {
   font-size: 30px;
   letter-spacing: 0.1em;
-}
-
-h3 {
-  font-size: 25px;
+  font-family: Italiana;
+  font-weight: normal;
 }
 
 h4 {
@@ -17,7 +15,7 @@ h4 {
 }
 
 .contact,
-.toTOP {
+.totop {
   width: 73%;
   margin: 0 auto;
 }
@@ -203,14 +201,16 @@ textarea::placeholder {
   opacity: 0.5;
 }
 
-.toTOP {
+.totop {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: -8px;
-  h2 {
+  .hope {
+    font-family: Italiana;
+    letter-spacing: 0.1em;
     font-size: 50px;
-    margin-left: -12%;
+    margin-left: -37%;
     color: #012f4e;
   }
   .contact_btn {

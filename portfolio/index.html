@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>unoemi</title>
+    <title>unoemi | works</title>
     <meta name="description" content="unoemiのポートフォリオ">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -93,22 +92,22 @@
                 <p class="ja_title">サービス</p>
             </div>
             <dl class="service_list">
-                <div class="service_item">
+                <dt class="service_item">
                     <img src="images/diamond.png" alt="ダイヤモンドの図形">
-                    <dt class="service_item">Web site creation | WEB サイト制作</dt>
-                </div>
+                    <div class="service_item">Web site creation | WEB サイト制作</div>
+                </dt>
                 <dd>コーポレートサイト、ブランド・サービスサイト、LP（ランディングサイト）等のサイト制作をデザインからコーディングまで承ります。
                     コーディングはどのデバイスでも見やすいよう（レスポンシブ対応）に制作いたします。
                 </dd>
-                <div class="service_item">
+                <dt class="service_item">
                     <img src="images/diamond.png" alt="ダイヤモンドの図形">
-                    <dt class="service_item">Design | デザイン</dt>
-                </div>
+                    <div class="service_item">Design | デザイン</div>
+                </dt>
                 <dd>SNS投稿用クリエイティブ、広告用クリエイティブ、サムネイル画像、チラシ・フライヤー等のデザインを承ります。</dd>
-                <div class="service_item">
+                <dt class="service_item">
                     <img src="images/diamond.png" alt="ダイヤモンドの図形">
-                    <dt class="service_item">Brading session | 戦略会議</dt>
-                </div>
+                    <div class="service_item">Brading session | 戦略会議</div>
+                </dt>
                 <dd>…comming soon. </dd>
             </dl>
             <p class="service_announce">その他、お悩み・お困りごとがございましたら、お気軽にご相談ください。</p>
@@ -118,55 +117,59 @@
                 <h3>skills</h3>
                 <p class="ja_title">対応ソフトの例</p>
             </div>
-            <ul class="skill_lists">
-                <div class="skill_block">
+            <div class="skill_lists">
+                <ul class="skill_block">
                     <li class="skill">illustrator</li>
                     <li class="skill">photoshop</li>
                     <li class="skill">canva</li>
                     <li class="skill">figma</li>
-                </div>
-                <div class="skill_block">
+                </ul>
+                <ul class="skill_block">
                     <li class="skill">HTML</li>
                     <li class="skill">CSS</li>
                     <li class="skill">Saas</li>
                     <li class="skill">JQuery</li>
-                </div>
-            </ul>
+                </ul>
+            </div>
             <p class="skill2">Google Looker Studio</p>
             <h2 class="skill_lead">Featured case studies.</h2>
-            <ul class="TOP_works">
-                <li class="TOP_work">
-                    <div class="TOP_work_img">
-                        <img src="./works/images/work_workers_website.png" alt="WORKERSのデザインモックアップ">
-                    </div>
-                    <div>
-                        <time>2024</time>
-                        <p class="work_ctg1">WEBサイト</p>
-                        <p class="skill_tag">illustrator</p>
-                    </div>
+            <ul class="top_works">
+                <li class="top_work">
+                    <a href="./works/work4.html">
+                        <div class="top_work_img">
+                            <img src="./works/images/work_workers_website.png" alt="workersのデザインモックアップ">
+                        </div>
+                        <div>
+                            <time>2024</time>
+                            <p class="work_cat1">WEBサイト</p>
+                            <p class="skill_tag">illustrator</p>
+                        </div>
+                    </a>
                 </li>
-                <li class="TOP_work">
-                    <div class="TOP_work_img">
-                        <img src="./works/images/WORK_Designcafe _website.png" alt="DESIGHNCAFEのコーディングモックアップ">
-                    </div>
-                    <div>
-                        <time>2024</time>
-                        <p class="work_ctg2">WEBサイト</p>
-                        <p class="skill_tag">HTML</p>
-                        <p class="skill_tag">CSS</p>
-                        <p class="skill_tag">jQuery</p>
-                    </div>
+                <li class="top_work">
+                    <a href="./works/work3.html">
+                        <div class="top_work_img">
+                            <img src="./works/images/work_designcafe_website.png" alt="DESIGHNCAFEのコーディングモックアップ">
+                        </div>
+                        <div>
+                            <time>2024</time>
+                            <p class="work_cat2">WEBサイト</p>
+                            <p class="skill_tag">HTML</p>
+                            <p class="skill_tag">CSS</p>
+                            <p class="skill_tag">jQuery</p>
+                        </div>
+                    </a>
                 </li>
             </ul>
             <a href="./works/index.html" class="view_more_btn">view more</a>
         </section>
-        <section class="contact">
+        <div class="contact">
             <h2>Feel free to contact.</h2>
-            <div class="contact_btn">
-                <a href="./contact/contact.html" class="btn_text">お問い合わせ</a>
+            <a href="./contact/contact.html" class="contact_btn">
+                <div class="btn_text">お問い合わせ</div>
                 <div class="btn_border"></div>
-            </div>
-        </section>
+            </a>
+        </div>
     </main>
     <footer class="footer">
         <a href="#top" class="footer_btn">top</a>
@@ -177,14 +180,7 @@
             <p>© 2024 uno emi</p>
         </div>
     </footer>
-    <script>
-        $(function () {
-            $('.pc_btn,.pc_nav').on('click', function () {
-                $('.pc_btn').toggleClass('open')
-                $('.pc_nav').fadeToggle();
-            })
-        });
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

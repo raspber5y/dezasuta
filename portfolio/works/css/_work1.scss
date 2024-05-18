@@ -1,12 +1,15 @@
 .work {
   width: 79%;
   padding-left: 10%;
+  display: flex;
+  justify-content: space-between;
 }
 
-h5 {
+h2 {
   font-family: Canbay, 游ゴシック体;
   margin-block-start: 0px;
   margin-block-end: 0px;
+  font-weight: normal;
 }
 
 .other_works {
@@ -211,20 +214,18 @@ h5 {
 
 .other_work {
   width: 21%;
-  margin-left: 10px;
+  margin-left: 15px;
   margin-right: 10px;
-  height: 230px;
   position: relative;
   .work_fram {
-    width: 93%;
-    height: 95%;
-    margin: 10px;
+    width: 100%;
   }
   .other_img {
     position: absolute;
-    left: 14%;
-    top: 6%;
-    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    width: 80%;
     margin: 0 auto;
     padding-top: 5%;
   }
@@ -280,13 +281,13 @@ h5 {
 .sort_nav {
   position: -webkit-sticky;
   position: sticky;
-  top: 165px;
-  right: 60px;
+  top: 300px;
   li {
     font-size: 13px;
     position: relative;
     padding-right: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    cursor: pointer;
     &:last-child {
       margin-bottom: 0;
     }
@@ -296,4 +297,20 @@ h5 {
       margin-bottom: -1px;
     }
   }
+}
+
+.sort_nav li::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 30%;
+  height: 1px;
+  background: #012f4e;
+  transition: all 0.3s;
+  transform: scale(0, 1);
+  transform-origin: center top;
+}
+.sort_nav li:hover::after {
+  transform: scale(1, 1);
 }

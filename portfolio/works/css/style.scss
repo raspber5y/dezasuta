@@ -4,7 +4,9 @@
 @use "./work1";
 @use "./work3";
 
-h2 {
+.title {
+  font-family: Italiana;
+  font-weight: normal;
   font-size: 30px;
   letter-spacing: 0.1em;
 }
@@ -16,6 +18,8 @@ h3 {
 }
 
 h4 {
+  font-family: Italiana;
+  font-weight: normal;
   color: #ffffff;
   font-size: 30px;
 }
@@ -71,7 +75,10 @@ header {
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: -8px;
-  h2 {
+  .hope {
+    font-family: Italiana;
+    font-weight: normal;
+    letter-spacing: 0.1em;
     font-size: 50px;
     margin-left: -12%;
     color: #012f4e;
@@ -90,6 +97,7 @@ header {
       rgb(1, 47, 78)
     );
     box-sizing: border-box;
+    cursor: pointer;
     .btn_text {
       position: absolute;
       top: 50%;
