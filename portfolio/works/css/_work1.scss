@@ -1,8 +1,7 @@
 .work {
-  width: 79%;
   padding-left: 10%;
   display: flex;
-  justify-content: space-between;
+  gap: 10%;
 }
 
 h2 {
@@ -23,7 +22,7 @@ h2 {
 }
 
 .work_area {
-  width: 83%;
+  width: 73%;
   padding-bottom: 192px;
   .first_title {
     padding-top: 80px;
@@ -65,6 +64,10 @@ h2 {
   filter: drop-shadow(-10px 10px 0px rgba(85, 86, 86, 0.3));
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+.work_nav {
+  width: 27%;
 }
 
 .slick-prev {
