@@ -2,6 +2,16 @@
 
 @use "../../css/common";
 
+// レスポンシブ対応
+// ブレイクポイント
+$mb: 767px;
+// @mediaのフォーマット
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
+}
+
 h2 {
   font-family: Italiana;
   font-weight: normal;
@@ -25,6 +35,9 @@ h4 {
 .contact {
   width: 73%;
   margin: 0 auto;
+  @include mobile {
+    width: 83%;
+  }
 }
 
 header {
@@ -37,12 +50,28 @@ header {
     justify-content: space-between;
     width: 100%;
     padding: 3%;
+    @include mobile {
+      padding: 25px;
+    }
     .emiuno_logo {
       width: 58px;
+      @include mobile {
+        width: 50px;
+      }
     }
   }
-  img {
+  .header_img {
     width: 100%;
+    @include mobile {
+      display: none;
+    }
+  }
+  .header_img_sp {
+    display: none;
+    @include mobile {
+      display: block;
+      width: 100%;
+    }
   }
 }
 
@@ -54,6 +83,9 @@ header {
   align-items: center;
   padding-bottom: 80px;
   margin-left: -12%;
+  @include mobile {
+    margin-left: -5%;
+  }
 }
 .title {
   padding-left: 10px;
@@ -69,16 +101,30 @@ header {
 .about_wrap {
   display: flex;
   justify-content: space-between;
+  @include mobile {
+    display: block;
+  }
   .about_pic {
     width: 28%;
+    @include mobile {
+      width: 100%;
+      text-align: center;
+    }
   }
   img {
-    width: 100%;
+    width: 90%;
     padding-top: 38px;
+    padding-bottom: 80px;
+    @include mobile {
+      padding-top: 50px;
+    }
   }
 }
 .about_left {
   width: 33%;
+  @include mobile {
+    width: 100%;
+  }
   .left_title {
     display: flex;
     align-items: baseline;
@@ -99,6 +145,10 @@ header {
 }
 .about_right {
   width: 30%;
+  @include mobile {
+    width: 100%;
+    margin-bottom: 250px;
+  }
   .right_title {
     display: flex;
     align-items: baseline;
@@ -113,6 +163,9 @@ header {
     font-size: 14px;
     padding-top: 10px;
     padding-bottom: 40px;
+    @include mobile {
+      margin-bottom: 50px;
+    }
     li {
       display: flex;
       align-items: baseline;
@@ -138,6 +191,11 @@ header {
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: -8px;
+  @include mobile {
+    display: block;
+    margin-bottom: 0px;
+    position: relative;
+  }
   .hope {
     font-family: Italiana;
     font-weight: normal;
@@ -145,6 +203,17 @@ header {
     margin-left: -12%;
     color: #012f4e;
     letter-spacing: 0.1em;
+    @include mobile {
+      width: 315px;
+      font-size: 31px;
+      letter-spacing: 0.07em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding-bottom: 350px;
+      margin-left: 0px;
+    }
   }
   .contact_btn {
     position: relative;
@@ -160,6 +229,13 @@ header {
       rgb(1, 47, 78)
     );
     box-sizing: border-box;
+    cursor: pointer;
+    @include mobile {
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      bottom: -99px;
+    }
     .btn_text {
       position: absolute;
       top: 50%;

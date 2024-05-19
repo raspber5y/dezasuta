@@ -32,7 +32,8 @@
             </div>
             <div class="pc_btn">menu<span></span></div>
         </div>
-        <img src="../images/sub_header.png" alt="右上から左下に光が指す画像">
+        <img class="header_img" src="../images/sub_header.png" alt="右上から左下に光が指す画像">
+        <img class="header_img_sp" src="../images/top_picture_sp.png" alt="右上から左下に光が指す画像">
     </header>
 
     <main>
@@ -368,27 +369,27 @@
                 $('.sort_tags li').removeClass('is-active');
                 $('.sort_tags li').eq(1).addClass('is-active');
                 $('.work_wrap').hide();
-                $('.work_wrap[date-cat=WEBサイト]').fadeIn();
+                $('.work_wrap[data-cat=WEBサイト]').fadeIn();
             } else if (hash == 'bnr') {
                 $('.sort_tags li').removeClass('is-active');
                 $('.sort_tags li').eq(2).addClass('is-active');
                 $('.work_wrap').hide();
-                $('.work_wrap[date-cat=バナー]').fadeIn();
+                $('.work_wrap[data-cat=バナー]').fadeIn();
             } else if (hash == 'fly') {
                 $('.sort_tags li').removeClass('is-active');
                 $('.sort_tags li').eq(3).addClass('is-active');
                 $('.work_wrap').hide();
-                $('.work_wrap[date-cat=チラシ]').fadeIn();
+                $('.work_wrap[data-cat=チラシ]').fadeIn();
             } else if (hash == 'logo') {
                 $('.sort_tags li').removeClass('is-active');
                 $('.sort_tags li').eq(4).addClass('is-active');
                 $('.work_wrap').hide();
-                $('.work_wrap[date-cat=ロゴ]').fadeIn();
+                $('.work_wrap[data-cat=ロゴ]').fadeIn();
             } else if (hash == 'other') {
                 $('.sort_tags li').removeClass('is-active');
                 $('.sort_tags li').eq(5).addClass('is-active');
                 $('.work_wrap').hide();
-                $('.work_wrap[date-cat=その他]').fadeIn();
+                $('.work_wrap[data-cat=その他]').fadeIn();
             }
         });
         $('.sort_tags li').on('click', function () {

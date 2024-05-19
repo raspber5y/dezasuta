@@ -2,6 +2,16 @@
 
 @use "../../css/common";
 
+// レスポンシブ対応
+// ブレイクポイント
+$mb: 767px;
+// @mediaのフォーマット
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
+}
+
 h2 {
   font-size: 30px;
   letter-spacing: 0.1em;
@@ -18,6 +28,9 @@ h4 {
 .totop {
   width: 73%;
   margin: 0 auto;
+  @include mobile {
+    width: 87%;
+  }
 }
 
 header {
@@ -30,18 +43,38 @@ header {
     justify-content: space-between;
     width: 100%;
     padding: 3%;
+    @include mobile {
+      padding: 25px;
+    }
     .emiuno_logo {
       width: 58px;
+      @include mobile {
+        width: 50px;
+      }
     }
   }
-  img {
+  .header_img {
     width: 100%;
+    @include mobile {
+      display: none;
+    }
+  }
+  .header_img_sp {
+    display: none;
+    @include mobile {
+      display: block;
+      width: 100%;
+    }
   }
 }
 
 .form_wrap {
   display: flex;
   justify-content: space-between;
+  @include mobile {
+    display: block;
+    margin-bottom: 250px;
+  }
 }
 
 .contact_title {
@@ -50,6 +83,9 @@ header {
   margin-left: -12%;
   padding-top: 80px;
   padding-bottom: 100px;
+  @include mobile {
+    margin-left: -5%;
+  }
   .title {
     padding-left: 10px;
   }
@@ -65,11 +101,56 @@ header {
 .form_lead {
   width: 40%;
   font-size: 15px;
-  .lead_text {
+  @include mobile {
+    width: 100%;
+    font-size: 14px;
+    padding-bottom: 80px;
+    text-align: center;
+    margin: 10px;
+  }
+  .lead_text,
+  .lead_text2 {
+    line-height: 1.74;
+  }
+  .lead_text2 {
+    @include mobile {
+      display: none;
+    }
+  }
+  .mailaddress {
+    display: flex;
+    padding-top: 90px;
+    padding-bottom: 10px;
+    @include mobile {
+      display: none;
+    }
+    img {
+      width: 18px;
+      padding-right: 10px;
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+.form_lead_sp {
+  display: none;
+  @include mobile {
+    display: block;
+    width: 100%;
+    font-size: 13px;
+    padding-bottom: 80px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .lead_text2 {
     line-height: 1.74;
   }
   .mailaddress {
     display: flex;
+    justify-content: center;
     padding-top: 90px;
     padding-bottom: 10px;
     img {
@@ -81,6 +162,9 @@ header {
 
 .form {
   width: 42%;
+  @include mobile {
+    width: 95%;
+  }
   .question {
     font-size: 15px;
     position: relative;
@@ -89,6 +173,9 @@ header {
     padding-bottom: 15px;
     align-items: center;
     margin-left: -30px;
+    @include mobile {
+      margin-left: -7px;
+    }
   }
   .question::before {
     content: "";
@@ -145,6 +232,9 @@ header {
     margin-right: 0;
     margin-bottom: 140px;
     filter: drop-shadow(-5px 5px 0px rgba(85, 86, 86, 0.3));
+    @include mobile {
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -206,12 +296,28 @@ textarea::placeholder {
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: -8px;
+  @include mobile {
+    display: block;
+    margin-bottom: 0px;
+    position: relative;
+  }
   .hope {
     font-family: Italiana;
     letter-spacing: 0.1em;
     font-size: 50px;
     margin-left: -37%;
     color: #012f4e;
+    @include mobile {
+      width: 317px;
+      font-size: 31px;
+      letter-spacing: 0.07em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding-bottom: 350px;
+      margin-left: 0px;
+    }
   }
   .contact_btn {
     position: relative;
@@ -227,6 +333,13 @@ textarea::placeholder {
       rgb(1, 47, 78)
     );
     box-sizing: border-box;
+    cursor: pointer;
+    @include mobile {
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      bottom: -99px;
+    }
     .btn_border {
       width: 100%;
       height: 100%;
@@ -253,18 +366,37 @@ textarea::placeholder {
 .thanks_wrap {
   text-align: center;
   margin-bottom: 80px;
+  @include mobile {
+    width: 108%;
+    margin-left: -4%;
+    margin-bottom: 250px;
+  }
   .bluerose {
     width: 6%;
     margin-bottom: 70px;
+    @include mobile {
+      width: 20%;
+    }
   }
   p {
     font-size: 15px;
     line-height: 1.73;
     align-items: center;
     margin-bottom: 40px;
+    @include mobile {
+      font-size: 14px;
+    }
+    span {
+      @include mobile {
+        display: inline-block;
+      }
+    }
   }
   .mail_icon {
     width: 2%;
     margin-bottom: 20px;
+    @include mobile {
+      width: 6%;
+    }
   }
 }

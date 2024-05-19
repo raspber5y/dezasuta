@@ -66,6 +66,11 @@ main {
   margin-bottom: 80px;
   padding-left: 40px;
 }
+@media screen and (max-width: 767px) {
+  .pc_nav ul .menu_btn {
+    font-size: 22px;
+  }
+}
 .pc_nav ul .menu_btn::before {
   content: "";
   position: absolute;
@@ -76,6 +81,12 @@ main {
   height: 20px;
   border-radius: 50%;
   border: 2px solid #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .pc_nav ul .menu_btn::before {
+    width: 17px;
+    height: 17px;
+  }
 }
 .pc_nav ul .menu_btn::after {
   content: "";
@@ -88,12 +99,22 @@ main {
   background: #ffffff;
   transition: 0.3s;
 }
+@media screen and (max-width: 767px) {
+  .pc_nav ul .menu_btn::after {
+    width: 12px;
+  }
+}
 .pc_nav ul .menu_btn:hover::after {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: #ffffff;
   left: 7px;
+}
+@media screen and (max-width: 767px) {
+  .pc_nav ul .menu_btn:hover::after {
+    left: 6px;
+  }
 }
 
 .pc_btn {
@@ -103,6 +124,11 @@ main {
   position: relative;
   padding-right: 40px;
   z-index: 99;
+}
+@media screen and (max-width: 767px) {
+  .pc_btn {
+    font-size: 24px;
+  }
 }
 
 .pc_btn::before {
@@ -116,6 +142,12 @@ main {
   border-radius: 50%;
   border: 2px solid #ffffff;
 }
+@media screen and (max-width: 767px) {
+  .pc_btn::before {
+    width: 17px;
+    height: 17px;
+  }
+}
 
 .pc_btn::after {
   content: "";
@@ -128,6 +160,11 @@ main {
   background: #ffffff;
   transition: 0.3s;
 }
+@media screen and (max-width: 767px) {
+  .pc_btn::after {
+    width: 12px;
+  }
+}
 
 .pc_btn:hover::after {
   width: 10px;
@@ -135,6 +172,11 @@ main {
   border-radius: 50%;
   background: #ffffff;
   right: 7px;
+}
+@media screen and (max-width: 767px) {
+  .pc_btn:hover::after {
+    right: 6px;
+  }
 }
 
 .pc_btn.open::before {
@@ -146,6 +188,12 @@ main {
   transform: rotate(45deg);
   background: #ffffff;
 }
+@media screen and (max-width: 767px) {
+  .pc_btn.open::before {
+    width: 20px;
+    top: 8px;
+  }
+}
 
 .pc_btn.open::after {
   border-radius: 0%;
@@ -156,12 +204,24 @@ main {
   border: 2px solid #ffffff;
   transform: rotate(135deg);
 }
+@media screen and (max-width: 767px) {
+  .pc_btn.open::after {
+    width: 20px;
+    top: 8px;
+  }
+}
 
 .footer {
   height: 322px;
   background: linear-gradient(to bottom, #f7e3da, #dab4b4);
   padding-top: 100px;
   padding-left: 7%;
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    height: 530px;
+    padding-top: 200px;
+  }
 }
 
 .footer .footer_btn {
@@ -171,6 +231,15 @@ main {
   position: relative;
   margin-right: 100px;
   padding-left: 40px;
+}
+@media screen and (max-width: 767px) {
+  .footer .footer_btn {
+    font-size: 17px;
+    margin-right: 0px;
+    display: block;
+    padding-left: 40px;
+    margin-bottom: 40px;
+  }
 }
 
 .footer .footer_btn::before {
@@ -184,6 +253,12 @@ main {
   border-radius: 50%;
   border: 2px solid #012f4e;
 }
+@media screen and (max-width: 767px) {
+  .footer .footer_btn::before {
+    width: 13px;
+    height: 13px;
+  }
+}
 
 .footer .footer_btn::after {
   content: "";
@@ -195,6 +270,12 @@ main {
   height: 2px;
   background: #012f4e;
   transition: 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .footer .footer_btn::after {
+    width: 9px;
+    left: 11px;
+  }
 }
 
 .footer .footer_btn:hover::after {
@@ -236,6 +317,12 @@ h4 {
   width: 73%;
   margin: 0 auto;
 }
+@media screen and (max-width: 767px) {
+  .about,
+  .contact {
+    width: 83%;
+  }
+}
 
 header {
   position: relative;
@@ -249,11 +336,35 @@ header .header_wrap {
   width: 100%;
   padding: 3%;
 }
+@media screen and (max-width: 767px) {
+  header .header_wrap {
+    padding: 25px;
+  }
+}
 header .header_wrap .emiuno_logo {
   width: 58px;
 }
-header img {
+@media screen and (max-width: 767px) {
+  header .header_wrap .emiuno_logo {
+    width: 50px;
+  }
+}
+header .header_img {
   width: 100%;
+}
+@media screen and (max-width: 767px) {
+  header .header_img {
+    display: none;
+  }
+}
+header .header_img_sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  header .header_img_sp {
+    display: block;
+    width: 100%;
+  }
 }
 
 .about {
@@ -265,6 +376,11 @@ header img {
   align-items: center;
   padding-bottom: 80px;
   margin-left: -12%;
+}
+@media screen and (max-width: 767px) {
+  .about_title {
+    margin-left: -5%;
+  }
 }
 
 .title {
@@ -283,16 +399,38 @@ header img {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  .about_wrap {
+    display: block;
+  }
+}
 .about_wrap .about_pic {
   width: 28%;
 }
+@media screen and (max-width: 767px) {
+  .about_wrap .about_pic {
+    width: 100%;
+    text-align: center;
+  }
+}
 .about_wrap img {
-  width: 100%;
+  width: 90%;
   padding-top: 38px;
+  padding-bottom: 80px;
+}
+@media screen and (max-width: 767px) {
+  .about_wrap img {
+    padding-top: 50px;
+  }
 }
 
 .about_left {
   width: 33%;
+}
+@media screen and (max-width: 767px) {
+  .about_left {
+    width: 100%;
+  }
 }
 .about_left .left_title {
   display: flex;
@@ -315,6 +453,12 @@ header img {
 .about_right {
   width: 30%;
 }
+@media screen and (max-width: 767px) {
+  .about_right {
+    width: 100%;
+    margin-bottom: 250px;
+  }
+}
 .about_right .right_title {
   display: flex;
   align-items: baseline;
@@ -329,6 +473,11 @@ header img {
   font-size: 14px;
   padding-top: 10px;
   padding-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .about_right ul {
+    margin-bottom: 50px;
+  }
 }
 .about_right ul li {
   display: flex;
@@ -354,6 +503,13 @@ header img {
   align-items: baseline;
   margin-bottom: -8px;
 }
+@media screen and (max-width: 767px) {
+  .contact {
+    display: block;
+    margin-bottom: 0px;
+    position: relative;
+  }
+}
 .contact .hope {
   font-family: Italiana;
   font-weight: normal;
@@ -361,6 +517,19 @@ header img {
   margin-left: -12%;
   color: #012f4e;
   letter-spacing: 0.1em;
+}
+@media screen and (max-width: 767px) {
+  .contact .hope {
+    width: 315px;
+    font-size: 31px;
+    letter-spacing: 0.07em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 350px;
+    margin-left: 0px;
+  }
 }
 .contact .contact_btn {
   position: relative;
@@ -372,6 +541,15 @@ header img {
   border-radius: 50%;
   background: linear-gradient(to bottom, rgba(38, 49, 101, 0.7), rgb(1, 47, 78));
   box-sizing: border-box;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .contact .contact_btn {
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    bottom: -99px;
+  }
 }
 .contact .contact_btn .btn_text {
   position: absolute;

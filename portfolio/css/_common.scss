@@ -3,6 +3,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Italiana&display=swap");
 
+// レスポンシブ対応
+// ブレイクポイント
+$mb: 767px;
+// @mediaのフォーマット
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
+}
+
 /* cssリセット */
 
 /*利用するタグによってこちらの内容は増やす*/
@@ -42,14 +52,6 @@ ul {
   list-style: none;
 }
 
-// h2,
-// h3,
-// h4,
-// h5 {
-//   font-family: Italiana;
-//   font-weight: normal;
-// }
-
 main {
   background: linear-gradient(to bottom, #f7e3da, #dab4b4);
 }
@@ -78,6 +80,9 @@ main {
     position: relative;
     margin-bottom: 80px;
     padding-left: 40px;
+    @include mobile {
+      font-size: 22px;
+    }
   }
   ul .menu_btn::before {
     content: "";
@@ -89,6 +94,10 @@ main {
     height: 20px;
     border-radius: 50%;
     border: 2px solid #ffffff;
+    @include mobile {
+      width: 17px;
+      height: 17px;
+    }
   }
   ul .menu_btn::after {
     content: "";
@@ -100,6 +109,9 @@ main {
     height: 2px;
     background: #ffffff;
     transition: 0.3s;
+    @include mobile {
+      width: 12px;
+    }
   }
   ul .menu_btn:hover::after {
     width: 10px;
@@ -107,6 +119,9 @@ main {
     border-radius: 50%;
     background: #ffffff;
     left: 7px;
+    @include mobile {
+      left: 6px;
+    }
   }
 }
 .pc_btn {
@@ -116,6 +131,9 @@ main {
   position: relative;
   padding-right: 40px;
   z-index: 99;
+  @include mobile {
+    font-size: 24px;
+  }
 }
 .pc_btn::before {
   content: "";
@@ -127,6 +145,10 @@ main {
   height: 20px;
   border-radius: 50%;
   border: 2px solid #ffffff;
+  @include mobile {
+    width: 17px;
+    height: 17px;
+  }
 }
 .pc_btn::after {
   content: "";
@@ -138,6 +160,9 @@ main {
   height: 2px;
   background: #ffffff;
   transition: 0.3s;
+  @include mobile {
+    width: 12px;
+  }
 }
 .pc_btn:hover::after {
   width: 10px;
@@ -145,6 +170,9 @@ main {
   border-radius: 50%;
   background: #ffffff;
   right: 7px;
+  @include mobile {
+    right: 6px;
+  }
 }
 .pc_btn.open::before {
   border-radius: 0%;
@@ -154,6 +182,10 @@ main {
   height: 0px;
   transform: rotate(45deg);
   background: #ffffff;
+  @include mobile {
+    width: 20px;
+    top: 8px;
+  }
 }
 .pc_btn.open::after {
   border-radius: 0%;
@@ -163,6 +195,10 @@ main {
   right: 0px;
   border: 2px solid #ffffff;
   transform: rotate(135deg);
+  @include mobile {
+    width: 20px;
+    top: 8px;
+  }
 }
 
 // フッター
@@ -171,6 +207,10 @@ main {
   background: linear-gradient(to bottom, #f7e3da, #dab4b4);
   padding-top: 100px;
   padding-left: 7%;
+  @include mobile {
+    height: 530px;
+    padding-top: 200px;
+  }
 }
 .footer .footer_btn {
   font-family: Cambay;
@@ -179,6 +219,13 @@ main {
   position: relative;
   margin-right: 100px;
   padding-left: 40px;
+  @include mobile {
+    font-size: 17px;
+    margin-right: 0px;
+    display: block;
+    padding-left: 40px;
+    margin-bottom: 40px;
+  }
 }
 .footer .footer_btn::before {
   content: "";
@@ -190,6 +237,10 @@ main {
   height: 20px;
   border-radius: 50%;
   border: 2px solid #012f4e;
+  @include mobile {
+    width: 13px;
+    height: 13px;
+  }
 }
 .footer .footer_btn::after {
   content: "";
@@ -201,6 +252,10 @@ main {
   height: 2px;
   background: #012f4e;
   transition: 0.3s;
+  @include mobile {
+    width: 9px;
+    left: 11px;
+  }
 }
 .footer .footer_btn:hover::after {
   width: 10px;
@@ -213,4 +268,26 @@ main {
   margin-top: 265px;
   padding-right: 10%;
   text-align: right;
+}
+
+// // モニタサイズ375pxを起点にしたvwのサイズ指定
+// @function vw($size, $viewport: 375) {
+//   $rate: 100 / $viewport;
+//   @return $rate * $size * 1vw;
+// }
+
+// // 上記のvwを利用したフォントサイズの指定
+// @mixin fz($font_size: 10) {
+//   font-size: $font_size * 1px; //vw非対応の場合の保険
+//   font-size: vw($font_size); //フォントをvw指定
+// }
+
+// レスポンシブ対応
+// ブレイクポイント
+$mb: 767px;
+// @mediaのフォーマット
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
 }

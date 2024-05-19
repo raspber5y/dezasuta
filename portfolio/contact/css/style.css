@@ -66,6 +66,11 @@ main {
   margin-bottom: 80px;
   padding-left: 40px;
 }
+@media screen and (max-width: 767px) {
+  .pc_nav ul .menu_btn {
+    font-size: 22px;
+  }
+}
 .pc_nav ul .menu_btn::before {
   content: "";
   position: absolute;
@@ -76,6 +81,12 @@ main {
   height: 20px;
   border-radius: 50%;
   border: 2px solid #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .pc_nav ul .menu_btn::before {
+    width: 17px;
+    height: 17px;
+  }
 }
 .pc_nav ul .menu_btn::after {
   content: "";
@@ -88,12 +99,22 @@ main {
   background: #ffffff;
   transition: 0.3s;
 }
+@media screen and (max-width: 767px) {
+  .pc_nav ul .menu_btn::after {
+    width: 12px;
+  }
+}
 .pc_nav ul .menu_btn:hover::after {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: #ffffff;
   left: 7px;
+}
+@media screen and (max-width: 767px) {
+  .pc_nav ul .menu_btn:hover::after {
+    left: 6px;
+  }
 }
 
 .pc_btn {
@@ -103,6 +124,11 @@ main {
   position: relative;
   padding-right: 40px;
   z-index: 99;
+}
+@media screen and (max-width: 767px) {
+  .pc_btn {
+    font-size: 24px;
+  }
 }
 
 .pc_btn::before {
@@ -116,6 +142,12 @@ main {
   border-radius: 50%;
   border: 2px solid #ffffff;
 }
+@media screen and (max-width: 767px) {
+  .pc_btn::before {
+    width: 17px;
+    height: 17px;
+  }
+}
 
 .pc_btn::after {
   content: "";
@@ -128,6 +160,11 @@ main {
   background: #ffffff;
   transition: 0.3s;
 }
+@media screen and (max-width: 767px) {
+  .pc_btn::after {
+    width: 12px;
+  }
+}
 
 .pc_btn:hover::after {
   width: 10px;
@@ -135,6 +172,11 @@ main {
   border-radius: 50%;
   background: #ffffff;
   right: 7px;
+}
+@media screen and (max-width: 767px) {
+  .pc_btn:hover::after {
+    right: 6px;
+  }
 }
 
 .pc_btn.open::before {
@@ -146,6 +188,12 @@ main {
   transform: rotate(45deg);
   background: #ffffff;
 }
+@media screen and (max-width: 767px) {
+  .pc_btn.open::before {
+    width: 20px;
+    top: 8px;
+  }
+}
 
 .pc_btn.open::after {
   border-radius: 0%;
@@ -156,12 +204,24 @@ main {
   border: 2px solid #ffffff;
   transform: rotate(135deg);
 }
+@media screen and (max-width: 767px) {
+  .pc_btn.open::after {
+    width: 20px;
+    top: 8px;
+  }
+}
 
 .footer {
   height: 322px;
   background: linear-gradient(to bottom, #f7e3da, #dab4b4);
   padding-top: 100px;
   padding-left: 7%;
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    height: 530px;
+    padding-top: 200px;
+  }
 }
 
 .footer .footer_btn {
@@ -171,6 +231,15 @@ main {
   position: relative;
   margin-right: 100px;
   padding-left: 40px;
+}
+@media screen and (max-width: 767px) {
+  .footer .footer_btn {
+    font-size: 17px;
+    margin-right: 0px;
+    display: block;
+    padding-left: 40px;
+    margin-bottom: 40px;
+  }
 }
 
 .footer .footer_btn::before {
@@ -184,6 +253,12 @@ main {
   border-radius: 50%;
   border: 2px solid #012f4e;
 }
+@media screen and (max-width: 767px) {
+  .footer .footer_btn::before {
+    width: 13px;
+    height: 13px;
+  }
+}
 
 .footer .footer_btn::after {
   content: "";
@@ -195,6 +270,12 @@ main {
   height: 2px;
   background: #012f4e;
   transition: 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .footer .footer_btn::after {
+    width: 9px;
+    left: 11px;
+  }
 }
 
 .footer .footer_btn:hover::after {
@@ -228,6 +309,12 @@ h4 {
   width: 73%;
   margin: 0 auto;
 }
+@media screen and (max-width: 767px) {
+  .contact,
+  .totop {
+    width: 87%;
+  }
+}
 
 header {
   position: relative;
@@ -241,16 +328,46 @@ header .header_wrap {
   width: 100%;
   padding: 3%;
 }
+@media screen and (max-width: 767px) {
+  header .header_wrap {
+    padding: 25px;
+  }
+}
 header .header_wrap .emiuno_logo {
   width: 58px;
 }
-header img {
+@media screen and (max-width: 767px) {
+  header .header_wrap .emiuno_logo {
+    width: 50px;
+  }
+}
+header .header_img {
   width: 100%;
+}
+@media screen and (max-width: 767px) {
+  header .header_img {
+    display: none;
+  }
+}
+header .header_img_sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  header .header_img_sp {
+    display: block;
+    width: 100%;
+  }
 }
 
 .form_wrap {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .form_wrap {
+    display: block;
+    margin-bottom: 250px;
+  }
 }
 
 .contact_title {
@@ -259,6 +376,11 @@ header img {
   margin-left: -12%;
   padding-top: 80px;
   padding-bottom: 100px;
+}
+@media screen and (max-width: 767px) {
+  .contact_title {
+    margin-left: -5%;
+  }
 }
 .contact_title .title {
   padding-left: 10px;
@@ -275,21 +397,78 @@ header img {
   width: 40%;
   font-size: 15px;
 }
-.form_lead .lead_text {
+@media screen and (max-width: 767px) {
+  .form_lead {
+    width: 100%;
+    font-size: 14px;
+    padding-bottom: 80px;
+    text-align: center;
+    margin: 10px;
+  }
+}
+.form_lead .lead_text,
+.form_lead .lead_text2 {
   line-height: 1.74;
+}
+@media screen and (max-width: 767px) {
+  .form_lead .lead_text2 {
+    display: none;
+  }
 }
 .form_lead .mailaddress {
   display: flex;
   padding-top: 90px;
   padding-bottom: 10px;
 }
+@media screen and (max-width: 767px) {
+  .form_lead .mailaddress {
+    display: none;
+  }
+}
 .form_lead .mailaddress img {
+  width: 18px;
+  padding-right: 10px;
+}
+@media screen and (max-width: 767px) {
+  .form_lead .mailaddress img {
+    display: none;
+  }
+}
+
+.form_lead_sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .form_lead_sp {
+    display: block;
+    width: 100%;
+    font-size: 13px;
+    padding-bottom: 80px;
+    text-align: center;
+    margin: 10px;
+  }
+}
+.form_lead_sp .lead_text2 {
+  line-height: 1.74;
+}
+.form_lead_sp .mailaddress {
+  display: flex;
+  justify-content: center;
+  padding-top: 90px;
+  padding-bottom: 10px;
+}
+.form_lead_sp .mailaddress img {
   width: 18px;
   padding-right: 10px;
 }
 
 .form {
   width: 42%;
+}
+@media screen and (max-width: 767px) {
+  .form {
+    width: 95%;
+  }
 }
 .form .question {
   font-size: 15px;
@@ -299,6 +478,11 @@ header img {
   padding-bottom: 15px;
   align-items: center;
   margin-left: -30px;
+}
+@media screen and (max-width: 767px) {
+  .form .question {
+    margin-left: -7px;
+  }
 }
 .form .question::before {
   content: "";
@@ -355,6 +539,11 @@ header img {
   margin-right: 0;
   margin-bottom: 140px;
   filter: drop-shadow(-5px 5px 0px rgba(85, 86, 86, 0.3));
+}
+@media screen and (max-width: 767px) {
+  .form button {
+    margin-bottom: 60px;
+  }
 }
 
 .form_checkmark {
@@ -416,12 +605,32 @@ textarea::placeholder {
   align-items: baseline;
   margin-bottom: -8px;
 }
+@media screen and (max-width: 767px) {
+  .totop {
+    display: block;
+    margin-bottom: 0px;
+    position: relative;
+  }
+}
 .totop .hope {
   font-family: Italiana;
   letter-spacing: 0.1em;
   font-size: 50px;
   margin-left: -37%;
   color: #012f4e;
+}
+@media screen and (max-width: 767px) {
+  .totop .hope {
+    width: 317px;
+    font-size: 31px;
+    letter-spacing: 0.07em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 350px;
+    margin-left: 0px;
+  }
 }
 .totop .contact_btn {
   position: relative;
@@ -433,6 +642,15 @@ textarea::placeholder {
   border-radius: 50%;
   background: linear-gradient(to bottom, rgba(38, 49, 101, 0.7), rgb(1, 47, 78));
   box-sizing: border-box;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .totop .contact_btn {
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    bottom: -99px;
+  }
 }
 .totop .contact_btn .btn_border {
   width: 100%;
@@ -458,9 +676,21 @@ textarea::placeholder {
   text-align: center;
   margin-bottom: 80px;
 }
+@media screen and (max-width: 767px) {
+  .thanks_wrap {
+    width: 108%;
+    margin-left: -4%;
+    margin-bottom: 250px;
+  }
+}
 .thanks_wrap .bluerose {
   width: 6%;
   margin-bottom: 70px;
+}
+@media screen and (max-width: 767px) {
+  .thanks_wrap .bluerose {
+    width: 20%;
+  }
 }
 .thanks_wrap p {
   font-size: 15px;
@@ -468,7 +698,22 @@ textarea::placeholder {
   align-items: center;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 767px) {
+  .thanks_wrap p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .thanks_wrap p span {
+    display: inline-block;
+  }
+}
 .thanks_wrap .mail_icon {
   width: 2%;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .thanks_wrap .mail_icon {
+    width: 6%;
+  }
 }/*# sourceMappingURL=style.css.map */

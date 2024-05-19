@@ -1,3 +1,13 @@
+// レスポンシブ対応
+// ブレイクポイント
+$mb: 767px;
+// @mediaのフォーマット
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
+}
+
 .preview {
   display: flex;
   justify-content: space-between;
@@ -6,6 +16,9 @@
 
 .pc_preview {
   width: 58%;
+  @include mobile {
+    width: 100%;
+  }
   .header_dum {
     width: 100%;
     height: 15px;
@@ -47,22 +60,22 @@
     height: 363px;
     border-radius: 0px 0px 0px 5px;
     overflow-y: scroll;
+    img {
+      width: 100%;
+    }
   }
   .pc_img::-webkit-scrollbar {
     width: 10px;
   }
-
   .pc_img::-webkit-scrollbar-track {
     background-color: #f7e3da;
     border-radius: 0px 0px 5px 0px;
   }
-
   .pc_img::-webkit-scrollbar-thumb {
     background-color: #c1bcbd;
     border-radius: 8px;
   }
 }
-
 .pc_icon,
 .sp_icon {
   display: flex;
@@ -77,9 +90,11 @@
     margin-right: 10px;
   }
 }
-
 .sp_preview {
   width: 24%;
+  @include mobile {
+    display: none;
+  }
   .sp_dum {
     width: 100%;
     height: 15px;
@@ -91,6 +106,9 @@
     height: 363px;
     border-radius: 0px 0px 0px 5px;
     overflow-y: scroll;
+    img {
+      width: 100%;
+    }
   }
   .sp_img::-webkit-scrollbar {
     width: 10px;
