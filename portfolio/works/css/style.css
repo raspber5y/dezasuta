@@ -801,6 +801,7 @@ h2 span {
 h3 {
   font-size: 16px;
   font-family: Cambay;
+  font-weight: normal;
   color: #ffffff;
 }
 
@@ -937,7 +938,9 @@ header .header_img_sp {
   height: 200px;
   padding: 15px;
   border-radius: 50%;
-  background: linear-gradient(to bottom, rgba(38, 49, 101, 0.7), rgb(1, 47, 78));
+  background: linear-gradient(#345971 0%, #012f4e 25%, #345971 50%, rgba(1, 47, 78, 0.4705882353) 100%);
+  background-position: 1% 50%;
+  background-size: auto 200%;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -962,6 +965,10 @@ header .header_img_sp {
   border-radius: 50%;
   border: #ffffff 1px solid;
   box-sizing: border-box;
+}
+
+.contact_btn:hover {
+  background-position: 100% 0;
 }
 
 .sort_tags {

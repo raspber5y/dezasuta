@@ -475,13 +475,13 @@ h4 {
     margin-bottom: 60px;
     width: 510px;
     height: 265px;
-    background: url(../images/work_frame.png) center / cover;
+    background: url(../images/work_flame.png) center / cover;
     @include mobile {
       width: 311px;
       height: 336px;
       display: block;
       align-items: flex-start;
-      background: url(../images/work_frame_sp.png) center / cover;
+      background: url(../images/work_flame_sp.png) center / cover;
       text-align: center;
     }
     img {
@@ -591,10 +591,13 @@ h4 {
   padding: 15px;
   border-radius: 50%;
   background: linear-gradient(
-    to bottom,
-    rgba(38, 49, 101, 0.7),
-    rgba(1, 47, 78, 1)
+    #345971 0%,
+    #012f4e 25%,
+    #345971 50%,
+    #012f4e78 100%
   );
+  background-position: 1% 50%;
+  background-size: auto 200%;
   box-sizing: border-box;
   @include mobile {
     left: 50%;
@@ -616,4 +619,7 @@ h4 {
     border: #ffffff 1px solid;
     box-sizing: border-box;
   }
+}
+.contact_btn:hover {
+  background-position: 100% 0;
 }

@@ -640,7 +640,9 @@ textarea::placeholder {
   height: 200px;
   padding: 15px;
   border-radius: 50%;
-  background: linear-gradient(to bottom, rgba(38, 49, 101, 0.7), rgb(1, 47, 78));
+  background: linear-gradient(#345971 0%, #012f4e 25%, #345971 50%, rgba(1, 47, 78, 0.4705882353) 100%);
+  background-position: 1% 50%;
+  background-size: auto 200%;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -670,6 +672,10 @@ textarea::placeholder {
 .totop .contact_btn .btn_text .btn_text_en {
   font-family: Cambay;
   font-size: 22px;
+}
+
+.contact_btn:hover {
+  background-position: 100% 0;
 }
 
 .thanks_wrap {
