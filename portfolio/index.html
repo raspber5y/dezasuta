@@ -12,6 +12,10 @@
 
 <body>
     <header id="top">
+        <div class="progress" id="progress">
+            <span class="progress_bar"></span>
+            <span class="progress_text">0%</span>
+        </div>
         <div class="mv_wrap">
             <div class="top_message">
                 <p class="message_v">Bright</p>
@@ -187,6 +191,89 @@
         </div>
     </footer>
     <script src="./js/script.js"></script>
+    <script>
+        $(function () {
+            imagesProgress();
+            function imagesProgress() {
+                var container = $('#progress'),
+                    progressBar = container.find('.progress_bar'),
+                    progressText = container.find('.progress_text'),
+                    imgLoad = imagesLoaded('body'),
+                    imgTotal = imgLoad.images.length,
+                    imgLoaded = 0,
+                    current = 0,
+                    progressTimer = setInterval(updateProgress, 1000 / 60);
+                imgLoad.on('progress', function () {
+                    imgLoaded++;
+                });
+                function updateProgress() {
+                    var target = (imgLoaded / imgTotal) * 100;
+                    current += (target - current) * 0.1;
+                    progressBar.css({ width: current + '%' });
+                    progressText.text(Math.floor(current) + '%');
+                    if (current >= 100) {
+                        clearInterval(progressTimer);
+                        container.addClass('progress_complete');
+                        progressBar.add(progressText)
+                            .delay(500)
+                            .animate({ opacity: 0 }, 250, function () {
+                                container.animate({ top: '- 100 %' }, 500);
+                            });
+                    }
+                    if (current > 99.9) {
+                        current = 100;
+                    }
+                }
+            }
+            var container = $('#progress'),
+                progressBar = container.find('.progress_bar'),
+                progressText = container.find('.progress_text'),
+                // imagesLoaded ライブラリで body 要素内の画像の読み込み状況を監視
+                // 同時に body 全体の画像の総数を保存
+                imgLoad = imagesLoaded('body'),
+                imgTotal = imgLoad.images.length,
+                // 読み込みの完了した画像の数のカウンターと、
+                // プログレス表示の現在地にあたる数値 (ともに最初は 0)
+                imgLoaded = 0,
+                current = 0,
+                // 1 秒間に 60 回のペースで読み込み状況をチェック
+                progressTimer = setInterval(updateProgress, 1000 / 60);
+            // imagesLoaded を利用し、画像が読み込まれるごとにカウンターを加算
+            imgLoad.on('progress', function () {
+                imgLoaded++;
+            });
+            function updateProgress() {
+                // 読み込みの完了した画像のパーセンテージ
+                var target = (imgLoaded / imgTotal) * 100;
+                // current (現在地) と target (目的地) の距離をもとにイージングをかける
+                current += (target - current) * 0.1;
+                // 表示のバーの幅とテキストに current の値を反映
+                // テキストは小数点以下を切り捨てて整数に
+                progressBar.css({ width: current + '%' });
+                progressText.text(Math.floor(current) + '%');
+            };
+            if (current >= 100) {
+                // プログレス表示の更新をストップ
+                clearInterval(progressTimer);
+                // CSS でスタイルを変えるためクラスを追加
+                container.addClass('progress_complete');
+                // プログレスバーとテキストを同時にアニメーションさせるため、
+                // グループ化して 1 つの jQuery オブジェクトに
+                progressBar.add(progressText)
+                    // 0.5 秒待つ
+                    .delay(500)
+                    // 0.25 秒かけてプログレスバーとテキストを透明にする
+                    .animate({ opacity: 0 }, 250, function () {
+                        // 0.5 秒かけてオーバーレイを上方向へスライドアウト
+                        container.animate({ top: '- 100 %' }, 500,);
+                    });
+            }
+            // current が 99.9 より大きければ 100 と見なして終了処理へ
+            if (current > 99.9) {
+                current = 100;
+            }
+        })
+    </script>
 </body>
 
 </html>
