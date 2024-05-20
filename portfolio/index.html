@@ -8,10 +8,16 @@
     <meta name="description" content="unoemiのポートフォリオ">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/imagesloaded@4.1.4/imagesloaded.pkgd.min.js"></script>
 </head>
 
 <body>
     <header id="top">
+        <!-- <div id="container"></div>
+        <div class="loader">
+            <div class="looping-rhombuses-spinner">
+            </div>
+        </div> -->
         <div class="progress" id="progress">
             <span class="progress_bar"></span>
             <span class="progress_text">0%</span>
@@ -192,6 +198,22 @@
     </footer>
     <script src="./js/script.js"></script>
     <script>
+        // var ProgressBar = require('progressbar.js');
+
+        // // Assuming we have an empty <div id="container"></div> in
+        // // HTML
+        // var bar = new ProgressBar.Line('#container', {
+        //     strokeWidth: 4,
+        //     easing: 'easeInOut',
+        //     duration: 1400,
+        //     color: '#FFEA82',
+        //     trailColor: '#eee',
+        //     trailWidth: 1,
+        //     svgStyle: { width: '100%', height: '100%' }
+        // });
+
+        // bar.animate(1.0);  // Number from 0.0 to 1.0
+
         $(function () {
             imagesProgress();
             function imagesProgress() {

@@ -1033,4 +1033,33 @@ h4 {
 
 .progress_complete .progress_bar {
   border-top-color: rgb(255, 255, 255);
+}
+
+.progress {
+  background-color: rgb(76, 84, 130);
+  color: rgb(255, 255, 255);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.progress_bar {
+  border-top: 1px solid rgb(160, 160, 160);
+  position: absolute;
+  top: 50%;
+  width: 0%;
+}
+
+.progress_text {
+  font-family: “Menlo”, “Consolas”, monospace;
+  font-size: 13px;
+  margin-top: 10px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+
+.progress_complete .progress_bar {
+  border-top-color: rgb(255, 255, 255);
 }/*# sourceMappingURL=style.css.map */

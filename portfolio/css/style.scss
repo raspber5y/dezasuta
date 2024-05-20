@@ -650,3 +650,51 @@ h4 {
 .progress_complete .progress_bar {
   border-top-color: rgb(255, 255, 255);
 }
+
+// ローディング
+.progress {
+  background-color: rgb(76, 84, 130);
+  color: rgb(255, 255, 255);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.progress_bar {
+  border-top: 1px solid rgb(160, 160, 160);
+  position: absolute;
+  top: 50%;
+  width: 0%;
+}
+.progress_text {
+  font-family: “Menlo”, “Consolas”, monospace;
+  font-size: 13px;
+  margin-top: 10px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+.progress_complete .progress_bar {
+  border-top-color: rgb(255, 255, 255);
+}
+// .loader {
+//   position: fixed;
+//   width: 100%;
+//   height: 100%;
+//   background-color: #012f4e;
+//   z-index: 555;
+//   top: 0;
+//   left: 0;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .loader .looping-rhombuses-spinner {
+//   display: none;
+// }
+// #container {
+//   margin: 20px;
+//   width: 400px;
+//   height: 8px;
+// }
