@@ -476,6 +476,7 @@ h4 {
     width: 510px;
     height: 265px;
     background: url(../images/work_flame.png) center / cover;
+    cursor: pointer;
     @include mobile {
       width: 311px;
       height: 336px;
@@ -599,6 +600,7 @@ h4 {
   background-position: 1% 50%;
   background-size: auto 200%;
   box-sizing: border-box;
+  cursor: pointer;
   @include mobile {
     left: 50%;
     transform: translateX(-50%);
@@ -622,33 +624,6 @@ h4 {
 }
 .contact_btn:hover {
   background-position: 100% 0;
-}
-
-// ローディング画面
-.progress {
-  background-color: rgb(76, 84, 130);
-  color: rgb(255, 255, 255);
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
-.progress_bar {
-  border-top: 1px solid rgb(160, 160, 160);
-  position: absolute;
-  top: 50%;
-  width: 0%;
-}
-.progress_text {
-  font-family: “Menlo”, “Consolas”, monospace;
-  font-size: 13px;
-  margin-top: 10px;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  width: 100%;
-}
-.progress_complete .progress_bar {
-  border-top-color: rgb(255, 255, 255);
 }
 
 // ローディング
@@ -677,27 +652,6 @@ h4 {
 .progress_complete .progress_bar {
   border-top-color: rgb(255, 255, 255);
 }
-// .loader {
-//   position: fixed;
-//   width: 100%;
-//   height: 100%;
-//   background-color: #012f4e;
-//   z-index: 555;
-//   top: 0;
-//   left: 0;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .loader .looping-rhombuses-spinner {
-//   display: none;
-// }
-// #container {
-//   margin: 20px;
-//   width: 400px;
-//   height: 8px;
-// }
 
 #splash {
   /*fixedで全面に固定*/
@@ -710,11 +664,11 @@ h4 {
   color: #fff;
 }
 
-/* Loadingバー中央配置　*/
+/* Loadingバー中央配置 */
 #splash_text {
   position: absolute;
-  font-family: cambay;
-  font-size: 50px;
+  font-family: Italiana;
+  font-size: 25px;
   top: 50%;
   left: 50%;
   z-index: 999;
@@ -723,7 +677,50 @@ h4 {
   color: #fff;
 }
 
-/*IE11対策用バーの線の高さ※対応しなければ削除してください*/
-#splash_text svg {
-  height: 2px;
+// スクロール後のヘッダー
+.second_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  z-index: 444;
+  /* 非表示にする */
+  opacity: 0;
+  visibility: hidden;
+  .header_wrap {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 21px;
+    position: absolute;
+    @include mobile {
+      padding: 14px;
+    }
+    .emiuno_logo {
+      width: 58px;
+      @include mobile {
+        width: 50px;
+      }
+    }
+  }
+  .header_img {
+    width: 100%;
+    @include mobile {
+      display: none;
+    }
+  }
+  .header_img_sp {
+    display: none;
+    @include mobile {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+.is-active {
+  /* 表示する */
+  opacity: 1;
+  visibility: visible;
 }
