@@ -164,10 +164,12 @@ h4 {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 30px;
+    padding-top: 1.5vw;
+    padding-left: 20px;
+    padding-right: 20px;
     position: absolute;
     @include mobile {
-      padding: 25px;
+      padding: 3.5vw;
     }
     .emiuno_logo {
       width: 58px;
@@ -178,8 +180,8 @@ h4 {
   }
 }
 .top_concept {
-  padding-top: 70px;
-  padding-bottom: 135px;
+  padding-top: 200px;
+  padding-bottom: 235px;
   .concept {
     font-size: 16px;
     display: grid;
@@ -202,14 +204,18 @@ h4 {
   font-family: Italiana;
   font-weight: normal;
   font-size: 50px;
-  // clamp (17px, 1.56vw, 30px)
   letter-spacing: 0.1em;
   margin-left: -12%;
   padding-bottom: 100px;
+  opacity: 0;
+  transition: opacity 3s, transform 3s;
   @include mobile {
-    font-size: 31px;
+    // font-size: 31px;
     margin-left: -5%;
   }
+}
+.lead.active {
+  opacity: 1;
 }
 
 .view_more_btn {
@@ -572,8 +578,8 @@ h4 {
   letter-spacing: 0.1em;
   margin-left: -12%;
   @include mobile {
-    width: 315px;
-    font-size: 31px;
+    width: 84vw;
+    // font-size: 31px;
     letter-spacing: 0.07em;
     position: absolute;
     top: 50%;
@@ -581,6 +587,36 @@ h4 {
     transform: translate(-50%, -50%);
     margin-left: 0px;
     padding-bottom: 350px;
+  }
+}
+.arrow {
+  width: 30px;
+  margin-left: -250px;
+  animation: arrowmove 1.6s ease-out infinite;
+  @keyframes arrowmove {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(300px);
+    }
+  }
+  @include mobile {
+    display: none;
+  }
+}
+.arrow_sp {
+  display: none;
+  @include mobile {
+    display: block;
+    width: 30px;
+    margin-left: 0px;
+    animation: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 150px;
   }
 }
 .contact_btn {
@@ -600,7 +636,6 @@ h4 {
   background-position: 1% 50%;
   background-size: auto 200%;
   box-sizing: border-box;
-  cursor: pointer;
   @include mobile {
     left: 50%;
     transform: translateX(-50%);
@@ -624,6 +659,7 @@ h4 {
 }
 .contact_btn:hover {
   background-position: 100% 0;
+  cursor: pointer;
 }
 
 // ローディング
@@ -675,52 +711,4 @@ h4 {
   width: 100%;
   transform: translate(-50%, -50%);
   color: #fff;
-}
-
-// スクロール後のヘッダー
-.second_header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: 0.3s;
-  z-index: 444;
-  /* 非表示にする */
-  opacity: 0;
-  visibility: hidden;
-  .header_wrap {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 21px;
-    position: absolute;
-    @include mobile {
-      padding: 14px;
-    }
-    .emiuno_logo {
-      width: 58px;
-      @include mobile {
-        width: 50px;
-      }
-    }
-  }
-  .header_img {
-    width: 100%;
-    @include mobile {
-      display: none;
-    }
-  }
-  .header_img_sp {
-    display: none;
-    @include mobile {
-      display: block;
-      width: 100%;
-    }
-  }
-}
-.is-active {
-  /* 表示する */
-  opacity: 1;
-  visibility: visible;
 }

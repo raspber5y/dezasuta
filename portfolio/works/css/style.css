@@ -43,7 +43,7 @@ main {
 
 .pc_nav {
   display: none;
-  position: absolute;
+  position: fixed;
   background: rgba(1, 47, 78, 0.8);
   width: 100%;
   height: 100vh;
@@ -209,6 +209,165 @@ main {
     width: 20px;
     top: 8px;
   }
+}
+
+.second_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  /* 非表示にする */
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99;
+}
+.second_header .header_wrap {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 1.5vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap {
+    padding: 3.5vw;
+  }
+}
+.second_header .header_wrap .emiuno_logo {
+  width: 58px;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap .emiuno_logo {
+    width: 50px;
+  }
+}
+.second_header .header_wrap .emiuno_logo.open {
+  opacity: 0;
+}
+.second_header .header_wrap .pc_btn {
+  font-family: Cambay;
+  font-size: 30px;
+  color: #ffffff;
+  padding-right: 40px;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap .pc_btn {
+    font-size: 24px;
+  }
+}
+.second_header .header_wrap .pc_btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap .pc_btn::before {
+    width: 17px;
+    height: 17px;
+  }
+}
+.second_header .header_wrap .pc_btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: 15px;
+  height: 2px;
+  background: #ffffff;
+  transition: 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap .pc_btn::after {
+    width: 12px;
+  }
+}
+.second_header .header_wrap .pc_btn:hover::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  right: 7px;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap .pc_btn:hover::after {
+    right: 6px;
+  }
+}
+.second_header .header_wrap .pc_btn.open::before {
+  border-radius: 0%;
+  top: 10px;
+  width: 25px;
+  right: 0px;
+  height: 0px;
+  transform: rotate(45deg);
+  background: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap .pc_btn.open::before {
+    width: 20px;
+    top: 8px;
+  }
+}
+.second_header .header_wrap .pc_btn.open::after {
+  border-radius: 0%;
+  width: 25px;
+  height: 0px;
+  top: 10px;
+  right: 0px;
+  border: 2px solid #ffffff;
+  transform: rotate(135deg);
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap .pc_btn.open::after {
+    width: 20px;
+    top: 8px;
+  }
+}
+.second_header .header_img {
+  width: 100%;
+  transition: opacity 0.3s, transform 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_img {
+    display: none;
+  }
+}
+.second_header .header_img.open {
+  opacity: 0;
+}
+.second_header .header_img_sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_img_sp {
+    display: block;
+    width: 100%;
+  }
+}
+.second_header .header_img_sp.open {
+  opacity: 0;
+}
+
+.is_active {
+  /* 表示する */
+  opacity: 0.5;
+  visibility: visible;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.is_active:hover {
+  opacity: 1;
 }
 
 .footer {
@@ -834,11 +993,13 @@ header .header_wrap {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 3%;
+  padding-top: 1.5vw;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 @media screen and (max-width: 767px) {
   header .header_wrap {
-    padding: 25px;
+    padding: 3.5vw;
   }
 }
 header .emiuno_logo {
@@ -930,6 +1091,40 @@ header .header_img_sp {
     margin-left: 0px;
   }
 }
+.contact .arrow {
+  width: 30px;
+  margin-left: -250px;
+  animation: arrowmove 1.6s ease-out infinite;
+}
+@keyframes arrowmove {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact .arrow {
+    display: none;
+  }
+}
+.contact .arrow_sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .contact .arrow_sp {
+    display: block;
+    width: 30px;
+    margin-left: 0px;
+    animation: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 150px;
+  }
+}
 .contact .contact_btn {
   position: relative;
   right: -90px;
@@ -969,6 +1164,7 @@ header .header_img_sp {
 
 .contact_btn:hover {
   background-position: 100% 0;
+  cursor: pointer;
 }
 
 .sort_tags {
@@ -978,13 +1174,22 @@ header .header_img_sp {
 }
 @media screen and (max-width: 767px) {
   .sort_tags {
-    display: none;
+    display: block;
   }
 }
 .sort_tags li {
   position: relative;
   padding-right: 40px;
   cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .sort_tags li {
+    display: flex;
+    align-items: center;
+    padding-bottom: 60px;
+    padding-left: 8%;
+    padding-right: 0px;
+  }
 }
 .sort_tags li img {
   width: 15px;
@@ -1001,6 +1206,19 @@ header .header_img_sp {
   display: inline;
 }
 
+@media screen and (max-width: 767px) {
+  .sort_tags li::before {
+    content: "";
+    position: absolute;
+    top: -31px;
+    left: 50%;
+    width: 100%;
+    height: 1px;
+    background: #012f4e;
+    transform: translateX(-50%);
+  }
+}
+
 .sort_tags li::after {
   content: "";
   position: absolute;
@@ -1013,9 +1231,35 @@ header .header_img_sp {
   transform: scale(0, 1);
   transform-origin: center top;
 }
+@media screen and (max-width: 767px) {
+  .sort_tags li::after {
+    bottom: 30px;
+    left: 50%;
+    width: 100%;
+    height: 1px;
+    transition: unset;
+    transform: translateX(-50%);
+  }
+}
 
 .sort_tags li:hover::after {
   transform: scale(1, 1);
+}
+@media screen and (max-width: 767px) {
+  .sort_tags li:hover::after {
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sort_btn {
+    background: #012f4e;
+    height: 11.2583302492px;
+    width: 13px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+    margin-left: 50vw;
+  }
 }
 
 .works_content {

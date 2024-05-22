@@ -43,7 +43,7 @@ main {
 
 .pc_nav {
   display: none;
-  position: absolute;
+  position: fixed;
   background: rgba(1, 47, 78, 0.8);
   width: 100%;
   height: 100vh;
@@ -209,6 +209,165 @@ main {
     width: 20px;
     top: 8px;
   }
+}
+
+.second_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  /* 非表示にする */
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99;
+}
+.second_header .header_wrap {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 1.5vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap {
+    padding: 3.5vw;
+  }
+}
+.second_header .header_wrap .emiuno_logo {
+  width: 58px;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap .emiuno_logo {
+    width: 50px;
+  }
+}
+.second_header .header_wrap .emiuno_logo.open {
+  opacity: 0;
+}
+.second_header .header_wrap .pc_btn {
+  font-family: Cambay;
+  font-size: 30px;
+  color: #ffffff;
+  padding-right: 40px;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap .pc_btn {
+    font-size: 24px;
+  }
+}
+.second_header .header_wrap .pc_btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap .pc_btn::before {
+    width: 17px;
+    height: 17px;
+  }
+}
+.second_header .header_wrap .pc_btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: 15px;
+  height: 2px;
+  background: #ffffff;
+  transition: 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap .pc_btn::after {
+    width: 12px;
+  }
+}
+.second_header .header_wrap .pc_btn:hover::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  right: 7px;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap .pc_btn:hover::after {
+    right: 6px;
+  }
+}
+.second_header .header_wrap .pc_btn.open::before {
+  border-radius: 0%;
+  top: 10px;
+  width: 25px;
+  right: 0px;
+  height: 0px;
+  transform: rotate(45deg);
+  background: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap .pc_btn.open::before {
+    width: 20px;
+    top: 8px;
+  }
+}
+.second_header .header_wrap .pc_btn.open::after {
+  border-radius: 0%;
+  width: 25px;
+  height: 0px;
+  top: 10px;
+  right: 0px;
+  border: 2px solid #ffffff;
+  transform: rotate(135deg);
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_wrap .pc_btn.open::after {
+    width: 20px;
+    top: 8px;
+  }
+}
+.second_header .header_img {
+  width: 100%;
+  transition: opacity 0.3s, transform 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_img {
+    display: none;
+  }
+}
+.second_header .header_img.open {
+  opacity: 0;
+}
+.second_header .header_img_sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .second_header .header_img_sp {
+    display: block;
+    width: 100%;
+  }
+}
+.second_header .header_img_sp.open {
+  opacity: 0;
+}
+
+.is_active {
+  /* 表示する */
+  opacity: 0.5;
+  visibility: visible;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.is_active:hover {
+  opacity: 1;
 }
 
 .footer {
@@ -466,12 +625,14 @@ h4 {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 30px;
+  padding-top: 1.5vw;
+  padding-left: 20px;
+  padding-right: 20px;
   position: absolute;
 }
 @media screen and (max-width: 767px) {
   .mv_wrap .header_wrap {
-    padding: 25px;
+    padding: 3.5vw;
   }
 }
 .mv_wrap .header_wrap .emiuno_logo {
@@ -484,8 +645,8 @@ h4 {
 }
 
 .top_concept {
-  padding-top: 70px;
-  padding-bottom: 135px;
+  padding-top: 200px;
+  padding-bottom: 235px;
 }
 .top_concept .concept {
   font-size: 16px;
@@ -513,12 +674,17 @@ h4 {
   letter-spacing: 0.1em;
   margin-left: -12%;
   padding-bottom: 100px;
+  opacity: 0;
+  transition: opacity 3s, transform 3s;
 }
 @media screen and (max-width: 767px) {
   .lead {
-    font-size: 31px;
     margin-left: -5%;
   }
+}
+
+.lead.active {
+  opacity: 1;
 }
 
 .view_more_btn {
@@ -955,8 +1121,7 @@ h4 {
 }
 @media screen and (max-width: 767px) {
   .hope {
-    width: 315px;
-    font-size: 31px;
+    width: 84vw;
     letter-spacing: 0.07em;
     position: absolute;
     top: 50%;
@@ -964,6 +1129,42 @@ h4 {
     transform: translate(-50%, -50%);
     margin-left: 0px;
     padding-bottom: 350px;
+  }
+}
+
+.arrow {
+  width: 30px;
+  margin-left: -250px;
+  animation: arrowmove 1.6s ease-out infinite;
+}
+@keyframes arrowmove {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .arrow {
+    display: none;
+  }
+}
+
+.arrow_sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .arrow_sp {
+    display: block;
+    width: 30px;
+    margin-left: 0px;
+    animation: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 150px;
   }
 }
 
@@ -979,7 +1180,6 @@ h4 {
   background-position: 1% 50%;
   background-size: auto 200%;
   box-sizing: border-box;
-  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .contact_btn {
@@ -1006,6 +1206,7 @@ h4 {
 
 .contact_btn:hover {
   background-position: 100% 0;
+  cursor: pointer;
 }
 
 .progress {
@@ -1059,60 +1260,4 @@ h4 {
   width: 100%;
   transform: translate(-50%, -50%);
   color: #fff;
-}
-
-.second_header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: 0.3s;
-  z-index: 444;
-  /* 非表示にする */
-  opacity: 0;
-  visibility: hidden;
-}
-.second_header .header_wrap {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 21px;
-  position: absolute;
-}
-@media screen and (max-width: 767px) {
-  .second_header .header_wrap {
-    padding: 14px;
-  }
-}
-.second_header .header_wrap .emiuno_logo {
-  width: 58px;
-}
-@media screen and (max-width: 767px) {
-  .second_header .header_wrap .emiuno_logo {
-    width: 50px;
-  }
-}
-.second_header .header_img {
-  width: 100%;
-}
-@media screen and (max-width: 767px) {
-  .second_header .header_img {
-    display: none;
-  }
-}
-.second_header .header_img_sp {
-  display: none;
-}
-@media screen and (max-width: 767px) {
-  .second_header .header_img_sp {
-    display: block;
-    width: 100%;
-  }
-}
-
-.is-active {
-  /* 表示する */
-  opacity: 1;
-  visibility: visible;
 }/*# sourceMappingURL=style.css.map */

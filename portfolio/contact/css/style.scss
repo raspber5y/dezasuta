@@ -43,9 +43,11 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 3%;
+    padding-top: 1.5vw;
+    padding-left: 20px;
+    padding-right: 20px;
     @include mobile {
-      padding: 25px;
+      padding: 3.5vw;
     }
     .emiuno_logo {
       width: 58px;
@@ -322,7 +324,7 @@ textarea::placeholder {
   }
   .contact_btn {
     position: relative;
-    right: -90px;
+    right: -225px;
     bottom: -93px;
     width: 200px;
     height: 200px;

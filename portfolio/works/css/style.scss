@@ -53,9 +53,11 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 3%;
+    padding-top: 1.5vw;
+    padding-left: 20px;
+    padding-right: 20px;
     @include mobile {
-      padding: 25px;
+      padding: 3.5vw;
     }
   }
   .emiuno_logo {
@@ -133,6 +135,36 @@ header {
       margin-left: 0px;
     }
   }
+  .arrow {
+    width: 30px;
+    margin-left: -250px;
+    animation: arrowmove 1.6s ease-out infinite;
+    @keyframes arrowmove {
+      0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(300px);
+      }
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  .arrow_sp {
+    display: none;
+    @include mobile {
+      display: block;
+      width: 30px;
+      margin-left: 0px;
+      animation: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding-bottom: 150px;
+    }
+  }
   .contact_btn {
     position: relative;
     right: -90px;
@@ -175,6 +207,7 @@ header {
 }
 .contact_btn:hover {
   background-position: 100% 0;
+  cursor: pointer;
 }
 
 .sort_tags {
@@ -182,12 +215,19 @@ header {
   justify-content: center;
   padding-bottom: 80px;
   @include mobile {
-    display: none;
+    display: block;
   }
   li {
     position: relative;
     padding-right: 40px;
     cursor: pointer;
+    @include mobile {
+      display: flex;
+      align-items: center;
+      padding-bottom: 60px;
+      padding-left: 8%;
+      padding-right: 0px;
+    }
     img {
       width: 15px;
       padding-right: 8px;
@@ -204,6 +244,18 @@ header {
     }
   }
 }
+.sort_tags li::before {
+  @include mobile {
+    content: "";
+    position: absolute;
+    top: -31px;
+    left: 50%;
+    width: 100%;
+    height: 1px;
+    background: #012f4e;
+    transform: translateX(-50%);
+  }
+}
 .sort_tags li::after {
   content: "";
   position: absolute;
@@ -215,9 +267,29 @@ header {
   transition: all 0.3s;
   transform: scale(0, 1);
   transform-origin: center top;
+  @include mobile {
+    bottom: 30px;
+    left: 50%;
+    width: 100%;
+    height: 1px;
+    transition: unset;
+    transform: translateX(-50%);
+  }
 }
 .sort_tags li:hover::after {
   transform: scale(1, 1);
+  @include mobile {
+    transform: none;
+  }
+}
+.sort_btn {
+  @include mobile {
+    background: #012f4e;
+    height: calc(tan(60deg) * 13px / 2);
+    width: 13px;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    margin-left: 50vw;
+  }
 }
 
 .works_content {

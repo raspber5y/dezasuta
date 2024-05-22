@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header id="top">
+    <header id="header">
         <div id="splash">
             <div id="splash_text"></div>
         </div>
@@ -28,7 +28,7 @@
             <nav class="pc_nav">
                 <h4>menu</h4>
                 <ul>
-                    <li><a href="#top" class="menu_btn">top</a></li>
+                    <li><a href="#header" class="menu_btn">top</a></li>
                     <li><a href="./about/index.html" class="menu_btn">about</a></li>
                     <li><a href="./works/index.html" class="menu_btn">works</a></li>
                     <li><a href="./contact/contact.html" class="menu_btn">contact</a></li>
@@ -36,7 +36,7 @@
             </nav>
             <div class="header_wrap">
                 <div>
-                    <a href="./index.html">
+                    <a href="#header">
                         <h1>
                             <img class="emiuno_logo" src="images/unoemi_logo.png" alt="emiunoのロゴ">
                         </h1>
@@ -48,7 +48,7 @@
         <div id="js_header" class="second_header">
             <div class="header_wrap">
                 <div>
-                    <a href="../index.html">
+                    <a href="#header">
                         <h1>
                             <img class="emiuno_logo" src="./images/unoemi_logo.png" alt="emiunoのロゴ">
                         </h1>
@@ -61,8 +61,8 @@
         </div>
     </header>
     <main id="inview">
-        <section class=" top_concept">
-            <h2 class="lead">Nice to meat you.</h2>
+        <section class="top_concept">
+            <h2 class="lead u-fz">Nice to meat you.</h2>
             <div class="concept">
                 <p class="concept_1">その想いを大切に。</p>
                 <p class="concept_2">
@@ -83,7 +83,7 @@
                     <p class="number">01</p>
                     <img src="images/characteristic_image.png" alt="複数の鳥が飛んでいる写真">
                     <p class="title">Characteristic | 個性</p>
-                    <p class="description">想いは強ければ強いほど、そこには密なバックグラウンドがあります。それは他者にない唯一無二の魅力です。
+                    <p class="description">想いの中に隠された、潜在的な価値。それは他者にない唯一無二の魅力です。
                         細かなヒアリングと多方面への関係構築からお客様だけの特徴を見つけ出し、ご提案いたします。
                     </p>
                 </li>
@@ -91,7 +91,7 @@
                     <p class="number">02</p>
                     <img src="images/sustainable_image@2x.png" alt="緑の葉の写真">
                     <p class="title">Sustainable | 持続可能性</p>
-                    <p class="description">どれだけ想いを込めた、その時いいデザインであっても、環境や人の変化で扱いにくく、見にくくなってしまうと、想いも朽ちてしまいます。
+                    <p class="description">環境や人の変化で扱いにくく、見にくくなってしまうと、想いも共に朽ちてしまいます。
                         タイムレス・ロングランの思考を持って、制作いたします。
                     </p>
                 </li>
@@ -99,8 +99,8 @@
                     <p class="number">03</p>
                     <img src="images/lovely_image@2x.png" alt="桜の写真">
                     <p class="title">Lovely | 愛おしい</p>
-                    <p class="description">時に重く高い壁にぶち当たっても、諦めずに乗り越えると、その過程の中でデザインは育てられ、永く愛されるデザインが生まれると考えています。
-                        デザインの可能性を信じて、目標達成を目指します。
+                    <p class="description">永く愛されるデザインは濃く、密な制作過程から生まれると考えています。
+                        デザインの可能性を信じて、目標達成を目指し、愛おしくなるほど作り込みます。
                     </p>
                 </li>
             </ul>
@@ -189,7 +189,9 @@
             <a href="./works/index.html" class="view_more_btn">view more</a>
         </section>
         <div class="contact">
-            <h2 class="hope">Feel free to contact.</h2>
+            <h2 class="hope u-fz">Feel free to contact.</h2>
+            <img class="arrow" src="./images/arrow.png" alt="">
+            <img class="arrow_sp" src="./images/arrow_sp.png" alt="">
             <a href="./contact/contact.html" class="contact_btn">
                 <div class="btn_text">お問い合わせ</div>
                 <div class="btn_border"></div>
@@ -197,7 +199,7 @@
         </div>
     </main>
     <footer class="footer">
-        <a href="#top" class="footer_btn">top</a>
+        <a href="#header" class="footer_btn">top</a>
         <a href="./about/index.html" class="footer_btn">about</a>
         <a href="./works/index.html" class="footer_btn">works</a>
         <a href="./contact/contact.html" class="footer_btn">contact</a>
@@ -239,7 +241,29 @@
         //アニメーションスタート
         bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
             $("#splash").delay(500).fadeOut(800);//アニメーションが終わったら#splashエリアをフェードアウト
-        }); 
+        });
+        $(function () {
+            // 'lead' クラスを持つ要素を全て取得
+            let targets = document.getElementsByClassName('lead');
+            // 取得した要素の数だけループを回す
+            for (let i = targets.length; i--;) {
+                // IntersectionObserverを作成し、要素が画面に入ったかどうかを監視
+                let observer = new IntersectionObserver((entries, observer) => {
+                    // 監視している要素の数だけループを回す
+                    for (let j = entries.length; j--;) {
+                        // 要素が画面に入っているか判定
+                        if (entries[j].isIntersecting) {
+                            // 'active' クラスを追加して見た目を変更
+                            entries[j].target.classList.add('active');
+                            // 一度画面に入ったら監視を止める
+                            observer.unobserve(entries[j].target);
+                        }
+                    }
+                });
+                // 各要素を監視対象に追加
+                observer.observe(targets[i]);
+            }
+        });
     </script>
 </body>
 

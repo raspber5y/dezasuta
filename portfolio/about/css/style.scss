@@ -49,9 +49,11 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 3%;
+    padding-top: 1.5vw;
+    padding-left: 20px;
+    padding-right: 20px;
     @include mobile {
-      padding: 25px;
+      padding: 3.5vw;
     }
     .emiuno_logo {
       width: 58px;
@@ -213,6 +215,36 @@ header {
       transform: translate(-50%, -50%);
       padding-bottom: 350px;
       margin-left: 0px;
+    }
+  }
+  .arrow {
+    width: 30px;
+    margin-left: -250px;
+    animation: arrowmove 1.6s ease-out infinite;
+    @keyframes arrowmove {
+      0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(300px);
+      }
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  .arrow_sp {
+    display: none;
+    @include mobile {
+      display: block;
+      width: 30px;
+      margin-left: 0px;
+      animation: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding-bottom: 150px;
     }
   }
   .contact_btn {

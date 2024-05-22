@@ -22,18 +22,20 @@
                 <li><a href="../contact/contact.html" class="menu_btn">contact</a></li>
             </ul>
         </nav>
-        <div class="header_wrap">
-            <div>
-                <a href="../index.html">
-                    <h1>
-                        <img class="emiuno_logo" src="../images/unoemi_logo.png" alt="emiunoのロゴ">
-                    </h1>
-                </a>
+        <div class="first_header">
+            <div class="header_wrap">
+                <div>
+                    <a href="../index.html">
+                        <h1>
+                            <img class="emiuno_logo" src="../images/unoemi_logo.png" alt="emiunoのロゴ">
+                        </h1>
+                    </a>
+                </div>
+                <div class="pc_btn">menu<span></span></div>
             </div>
-            <div class="pc_btn">menu<span></span></div>
+            <img class="header_img" src="../images/sub_header.png" alt="右上から左下に光が指す画像">
+            <img class="header_img_sp" src="../images/top_picture_sp.png" alt="右上から左下に光が指す画像">
         </div>
-        <img class="header_img" src="../images/sub_header.png" alt="右上から左下に光が指す画像">
-        <img class="header_img_sp" src="../images/top_picture_sp.png" alt="右上から左下に光が指す画像">
     </header>
 
     <main>
@@ -47,28 +49,29 @@
                     <img class="icon-inactive" src="../images/diamond.png" alt="">
                     <img class="icon-active" src="images/diamond_solid.png" alt="">
                     <span class="tag-name">全て</span>
+                    <div class="sort_btn"></div>
                 </li>
-                <li>
+                <li class="sort_tag_open">
                     <img class="icon-inactive" src="../images/diamond.png" alt="">
                     <img class="icon-active" src="images/diamond_solid.png" alt="">
                     <span class="tag-name">WEBサイト</span>
                 </li>
-                <li>
+                <li class="sort_tag_open">
                     <img class="icon-inactive" src="../images/diamond.png" alt="">
                     <img class="icon-active" src="images/diamond_solid.png" alt="">
                     <span class="tag-name">バナー</span>
                 </li>
-                <li>
+                <li class="sort_tag_open">
                     <img class="icon-inactive" src="../images/diamond.png" alt="">
                     <img class="icon-active" src="images/diamond_solid.png" alt="">
                     <span class="tag-name">チラシ</span>
                 </li>
-                <li>
+                <li class="sort_tag_open">
                     <img class="icon-inactive" src="../images/diamond.png" alt="">
                     <img class="icon-active" src="images/diamond_solid.png" alt="">
                     <span class="tag-name">ロゴ</span>
                 </li>
-                <li>
+                <li class="sort_tag_open">
                     <img class="icon-inactive" src="../images/diamond.png" alt="">
                     <img class="icon-active" src="images/diamond_solid.png" alt="">
                     <span class="tag-name">その他</span>
@@ -343,6 +346,8 @@
         </section>
         <div class="contact">
             <p class="hope">Feel free to contact.</p>
+            <img class="arrow" src="../images/arrow.png" alt="">
+            <img class="arrow_sp" src="../images/arrow_sp.png" alt="">
             <a href="../contact/contact.html" class="contact_btn">
                 <div class="btn_text">お問い合わせ</div>
                 <div class="btn_border"></div>
@@ -362,6 +367,7 @@
 
     <script src="../js/script.js"></script>
     <script>
+        // 絞り込み
         $(function () {
             var hash = $(location).prop('hash').substr(1);
             console.log(hash);
@@ -411,7 +417,17 @@
                 $('.pc_btn').toggleClass('open')
             });
         });
-
+        // spプルダウン
+        $(function () {
+            if ($(window).width() <= 767) {
+                console.log(100)
+                $('.sort_tag_open').hide();
+                console.log(100)
+                $(".sort_btn").click(function () {
+                    $(".sort_tag_open").slideToggle("");
+                });
+            }
+        });
     </script>
 
 </body>
