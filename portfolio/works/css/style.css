@@ -51,20 +51,23 @@ main {
   padding-top: 200px;
   z-index: 98;
 }
-.pc_nav h4 {
+.pc_nav .menu {
   width: 40px;
   padding-bottom: 10px;
   border-bottom: solid 1px #ffffff;
   margin-bottom: 80px;
 }
 .pc_nav ul .menu_btn {
-  display: block;
-  font-family: Cambay;
+  display: flex;
+  align-items: center;
+  font-family: "Cambay", sans-serif;
   font-size: 30px;
   color: #ffffff;
   position: relative;
   margin-bottom: 80px;
   padding-left: 40px;
+  height: 30px;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .pc_nav ul .menu_btn {
@@ -116,14 +119,18 @@ main {
     left: 6px;
   }
 }
+.pc_nav ul .menu_btn.ja {
+  font-size: 20px;
+}
 
 .pc_btn {
-  font-family: Cambay;
+  font-family: "Cambay", sans-serif;
   font-size: 30px;
   color: #ffffff;
   position: relative;
   padding-right: 40px;
   z-index: 99;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .pc_btn {
@@ -239,6 +246,8 @@ main {
 }
 .second_header .header_wrap .emiuno_logo {
   width: 58px;
+  position: relative;
+  z-index: 99;
 }
 @media screen and (max-width: 767px) {
   .second_header .header_wrap .emiuno_logo {
@@ -249,10 +258,11 @@ main {
   opacity: 0;
 }
 .second_header .header_wrap .pc_btn {
-  font-family: Cambay;
+  font-family: "Cambay", sans-serif;
   font-size: 30px;
   color: #ffffff;
   padding-right: 40px;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .second_header .header_wrap .pc_btn {
@@ -277,6 +287,7 @@ main {
   }
 }
 .second_header .header_wrap .pc_btn::after {
+  position: fixed;
   content: "";
   position: absolute;
   top: 50%;
@@ -361,13 +372,9 @@ main {
 
 .is_active {
   /* 表示する */
-  opacity: 0.5;
+  opacity: 1;
   visibility: visible;
   transition: opacity 0.5s, transform 0.5s;
-}
-
-.is_active:hover {
-  opacity: 1;
 }
 
 .footer {
@@ -378,13 +385,13 @@ main {
 }
 @media screen and (max-width: 767px) {
   .footer {
-    height: 530px;
-    padding-top: 200px;
+    height: 380px;
+    padding-top: 150px;
   }
 }
 
 .footer .footer_btn {
-  font-family: Cambay;
+  font-family: "Cambay", sans-serif;
   font-size: 26px;
   color: #012f4e;
   position: relative;
@@ -395,7 +402,15 @@ main {
   .footer .footer_btn {
     font-size: 17px;
     margin-right: 0px;
+    padding-left: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .footer .footer_btn {
     display: block;
+    font-size: 17px;
+    margin-right: 0px;
     padding-left: 40px;
     margin-bottom: 40px;
   }
@@ -449,6 +464,11 @@ main {
   margin-top: 265px;
   padding-right: 10%;
   text-align: right;
+}
+@media screen and (max-width: 990px) {
+  .footer .copyright {
+    margin-top: 130px;
+  }
 }
 
 .work {
@@ -627,7 +647,7 @@ h2 span {
   margin-bottom: 10px;
 }
 .right_group .info_title .en_title {
-  font-family: Italiana;
+  font-family: "Italiana", serif;
   font-size: 24px;
 }
 .right_group .info_title .ja_title {
@@ -738,7 +758,7 @@ h2 span {
 }
 
 .view_more_btn {
-  font-family: Cambay;
+  font-family: "Cambay", sans-serif;
   font-size: 25px;
   margin-top: 50px;
   margin-right: 13%;
@@ -838,7 +858,7 @@ h2 span {
 }
 @media screen and (max-width: 767px) {
   .pc_preview {
-    width: 100%;
+    display: none;
   }
 }
 .pc_preview .header_dum {
@@ -920,7 +940,7 @@ h2 span {
 }
 @media screen and (max-width: 767px) {
   .sp_preview {
-    display: none;
+    width: 100%;
   }
 }
 .sp_preview .sp_dum {
@@ -934,6 +954,11 @@ h2 span {
   height: 363px;
   border-radius: 0px 0px 0px 5px;
   overflow-y: scroll;
+}
+@media screen and (max-width: 767px) {
+  .sp_preview .sp_img {
+    height: 600px;
+  }
 }
 .sp_preview .sp_img img {
   width: 100%;
@@ -951,7 +976,7 @@ h2 span {
 }
 
 .title {
-  font-family: Italiana;
+  font-family: "Italiana", serif;
   font-weight: normal;
   font-size: 30px;
   letter-spacing: 0.1em;
@@ -959,13 +984,13 @@ h2 span {
 
 h3 {
   font-size: 16px;
-  font-family: Cambay;
+  font-family: "Cambay", sans-serif;
   font-weight: normal;
   color: #ffffff;
 }
 
-h4 {
-  font-family: Italiana;
+.menu {
+  font-family: "Italiana", serif;
   font-weight: normal;
   color: #ffffff;
   font-size: 30px;
@@ -1012,6 +1037,7 @@ header .emiuno_logo {
 }
 header .header_img {
   width: 100%;
+  display: block;
 }
 @media screen and (max-width: 767px) {
   header .header_img {
@@ -1070,7 +1096,7 @@ header .header_img_sp {
   }
 }
 .contact .hope {
-  font-family: Italiana;
+  font-family: "Italiana", serif;
   font-weight: normal;
   letter-spacing: 0.1em;
   font-size: 50px;
@@ -1167,6 +1193,49 @@ header .header_img_sp {
   cursor: pointer;
 }
 
+.sort_sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .sort_sp {
+    display: block;
+    position: relative;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sort_sp .sort_open {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 8%;
+    padding-right: 0px;
+    border: none;
+    border-top: 1px solid #012f4e;
+    border-bottom: 1px solid #012f4e;
+    width: 100%;
+    background: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sort_sp .sort_btn {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    background: #012f4e;
+    height: 11.2583302492px;
+    width: 13px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+    margin-left: 50vw;
+  }
+}
+.sort_sp .sort_btn.active {
+  -webkit-clip-path: polygon(0 100%, 50% 0, 100% 100%);
+          clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
 .sort_tags {
   display: flex;
   justify-content: center;
@@ -1186,15 +1255,29 @@ header .header_img_sp {
   .sort_tags li {
     display: flex;
     align-items: center;
-    padding-bottom: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     padding-left: 8%;
     padding-right: 0px;
+    border-bottom: 1px solid #012f4e;
+  }
+}
+@media screen and (max-width: 990px) {
+  .sort_tags li {
+    font-size: 14px;
+    padding-right: 30px;
   }
 }
 .sort_tags li img {
   width: 15px;
   padding-right: 8px;
   margin-bottom: -1px;
+}
+@media screen and (max-width: 990px) {
+  .sort_tags li img {
+    width: 13px;
+    padding-right: 4px;
+  }
 }
 .sort_tags li .icon-active {
   display: none;
@@ -1209,13 +1292,6 @@ header .header_img_sp {
 @media screen and (max-width: 767px) {
   .sort_tags li::before {
     content: "";
-    position: absolute;
-    top: -31px;
-    left: 50%;
-    width: 100%;
-    height: 1px;
-    background: #012f4e;
-    transform: translateX(-50%);
   }
 }
 
@@ -1233,12 +1309,7 @@ header .header_img_sp {
 }
 @media screen and (max-width: 767px) {
   .sort_tags li::after {
-    bottom: 30px;
-    left: 50%;
-    width: 100%;
-    height: 1px;
-    transition: unset;
-    transform: translateX(-50%);
+    display: none;
   }
 }
 
@@ -1248,17 +1319,6 @@ header .header_img_sp {
 @media screen and (max-width: 767px) {
   .sort_tags li:hover::after {
     transform: none;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .sort_btn {
-    background: #012f4e;
-    height: 11.2583302492px;
-    width: 13px;
-    -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
-            clip-path: polygon(0 0, 100% 0, 50% 100%);
-    margin-left: 50vw;
   }
 }
 

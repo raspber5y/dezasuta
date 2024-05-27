@@ -1,12 +1,34 @@
 // レスポンシブ対応
 // ブレイクポイント
 $mb: 767px;
+$tb: 834px;
+$md: 990px;
+$anm: 1100px;
 // @mediaのフォーマット
 @mixin mobile {
   @media screen and (max-width: $mb) {
     @content;
   }
 }
+@mixin tablet {
+  @media screen and (max-width: $tb) {
+    @content;
+  }
+}
+@mixin middle {
+  @media screen and (max-width: $md) {
+    @content;
+  }
+}
+@mixin animation {
+  @media screen and (max-width: $anm) {
+    @content;
+  }
+}
+
+// フォント
+$font-italiana: "Italiana", serif;
+$font-cambay: "Cambay", sans-serif;
 
 .work {
   padding-left: 10%;
@@ -164,7 +186,7 @@ h2 {
     padding-bottom: 10px;
     margin-bottom: 10px;
     .en_title {
-      font-family: Italiana;
+      font-family: $font-italiana;
       font-size: 24px;
     }
     .ja_title {
@@ -273,7 +295,7 @@ h2 {
 }
 
 .view_more_btn {
-  font-family: Cambay;
+  font-family: $font-cambay;
   font-size: 25px;
   margin-top: 50px;
   margin-right: 13%;

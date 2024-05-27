@@ -8,6 +8,38 @@ $('.pc_btn,.pc_nav,.second_header .second_header .emiuno_logo,.second_header .he
     $('.second_header .header_img_sp').toggleClass('open');
 
 })
+$(function(){
+    $('.js_top').hover(function(){
+        $(this).toggleClass('ja');
+        $(this).text('トップ');
+    },function(){
+        $(this).removeClass('ja');
+        $(this).text('top');
+    });
+    $('.js_about').hover(function(){
+        $(this).toggleClass('ja');
+        $(this).text('自己紹介');
+    },function(){
+        $(this).removeClass('ja');
+        $(this).text('about');
+    });
+    $('.js_works').hover(function(){
+        $(this).toggleClass('ja');
+        $(this).text('実績');
+    },function(){
+        $(this).removeClass('ja');
+        $(this).text('works');
+    });
+    $('.js_contact').hover(function(){
+        $(this).toggleClass('ja');
+        $(this).text('お問い合わせ');
+    },function(){
+        $(this).removeClass('ja');
+        $(this).text('contact');
+    });
+});
+    
+
 
 // スクロール後のヘッダー表示
 $(function(){
@@ -17,19 +49,22 @@ $(function(){
     $(window).scroll(function() {
         var scroll_y = window.scrollY;
         // スクロール開始するとボタンを非表示
-        btn.removeClass('is_active');
+        if (!$('.pc_btn').hasClass('open')) {
+            btn.removeClass('is_active');
+        }
         if( scroll_y > fv_height ) {		
             // スクロール中はイベントの発火をキャンセルする
             clearTimeout(timer);
             // スクロールが停止して1秒後にイベントを発火する
             timer = setTimeout(function() {
                 btn.addClass('is_active');
-            },1000);
+            },1000);            
         } else{
-            btn.removeClass('is_active');
+            if (!$('.pc_btn').hasClass('open')) {
+                btn.removeClass('is_active');
             }
         }
-    )
+    })
 });
 
 // clamp自動計算

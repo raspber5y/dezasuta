@@ -5,22 +5,44 @@
 // レスポンシブ対応
 // ブレイクポイント
 $mb: 767px;
+$tb: 834px;
+$md: 990px;
+$anm: 1100px;
 // @mediaのフォーマット
 @mixin mobile {
   @media screen and (max-width: $mb) {
     @content;
   }
 }
+@mixin tablet {
+  @media screen and (max-width: $tb) {
+    @content;
+  }
+}
+@mixin middle {
+  @media screen and (max-width: $md) {
+    @content;
+  }
+}
+@mixin animation {
+  @media screen and (max-width: $anm) {
+    @content;
+  }
+}
+
+// フォント
+$font-italiana: "Italiana", serif;
+$font-cambay: "Cambay", sans-serif;
 
 h2 {
   font-size: 30px;
   letter-spacing: 0.1em;
-  font-family: Italiana;
+  font-family: $font-italiana;
   font-weight: normal;
 }
 
-h4 {
-  font-family: Italiana;
+.menu {
+  font-family: $font-italiana;
   color: #ffffff;
   font-size: 30px;
 }
@@ -58,6 +80,7 @@ header {
   }
   .header_img {
     width: 100%;
+    display: block;
     @include mobile {
       display: none;
     }
@@ -207,7 +230,7 @@ header {
     height: 36px;
     color: #012f4e;
     padding: 10px;
-    background: #c1bcbd;
+    background: #faede8;
     border: none;
     margin-bottom: 30px;
     box-sizing: border-box;
@@ -217,7 +240,7 @@ header {
     height: 290px;
     color: #012f4e;
     padding: 10px;
-    background: #c1bcbd;
+    background: #faede8;
     border: none;
     margin-bottom: 30px;
     box-sizing: border-box;
@@ -235,9 +258,17 @@ header {
     margin-right: 0;
     margin-bottom: 140px;
     filter: drop-shadow(-5px 5px 0px rgba(85, 86, 86, 0.3));
+    transition: all 0.2s ease;
     @include mobile {
       margin-bottom: 60px;
+      color: #012f4e;
     }
+  }
+  button:hover {
+    border-color: transparent;
+    filter: none;
+    background: #faede8;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -305,7 +336,7 @@ textarea::placeholder {
     position: relative;
   }
   .hope {
-    font-family: Italiana;
+    font-family: $font-italiana;
     letter-spacing: 0.1em;
     font-size: 50px;
     margin-left: -37%;
@@ -320,6 +351,36 @@ textarea::placeholder {
       transform: translate(-50%, -50%);
       padding-bottom: 350px;
       margin-left: 0px;
+    }
+  }
+  .arrow {
+    width: 30px;
+    margin-left: 0px;
+    animation: arrowmove 1.6s ease-out infinite;
+    @keyframes arrowmove {
+      0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(200px);
+      }
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  .arrow_sp {
+    display: none;
+    @include mobile {
+      display: block;
+      width: 30px;
+      margin-left: 0px;
+      animation: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding-bottom: 150px;
     }
   }
   .contact_btn {
@@ -361,7 +422,7 @@ textarea::placeholder {
       transform: translate(-50%, -50%);
       color: #ffffff;
       .btn_text_en {
-        font-family: Cambay;
+        font-family: $font-cambay;
         font-size: 22px;
       }
     }
@@ -380,11 +441,8 @@ textarea::placeholder {
     margin-bottom: 250px;
   }
   .bluerose {
-    width: 6%;
+    width: 60px;
     margin-bottom: 70px;
-    @include mobile {
-      width: 20%;
-    }
   }
   p {
     font-size: 15px;

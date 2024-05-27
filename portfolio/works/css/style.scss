@@ -7,15 +7,37 @@
 // レスポンシブ対応
 // ブレイクポイント
 $mb: 767px;
+$tb: 834px;
+$md: 990px;
+$anm: 1100px;
 // @mediaのフォーマット
 @mixin mobile {
   @media screen and (max-width: $mb) {
     @content;
   }
 }
+@mixin tablet {
+  @media screen and (max-width: $tb) {
+    @content;
+  }
+}
+@mixin middle {
+  @media screen and (max-width: $md) {
+    @content;
+  }
+}
+@mixin animation {
+  @media screen and (max-width: $anm) {
+    @content;
+  }
+}
+
+// フォント
+$font-italiana: "Italiana", serif;
+$font-cambay: "Cambay", sans-serif;
 
 .title {
-  font-family: Italiana;
+  font-family: $font-italiana;
   font-weight: normal;
   font-size: 30px;
   letter-spacing: 0.1em;
@@ -23,13 +45,13 @@ $mb: 767px;
 
 h3 {
   font-size: 16px;
-  font-family: Cambay;
+  font-family: $font-cambay;
   font-weight: normal;
   color: #ffffff;
 }
 
-h4 {
-  font-family: Italiana;
+.menu {
+  font-family: $font-italiana;
   font-weight: normal;
   color: #ffffff;
   font-size: 30px;
@@ -68,6 +90,7 @@ header {
   }
   .header_img {
     width: 100%;
+    display: block;
     @include mobile {
       display: none;
     }
@@ -116,7 +139,7 @@ header {
     position: relative;
   }
   .hope {
-    font-family: Italiana;
+    font-family: $font-italiana;
     font-weight: normal;
     letter-spacing: 0.1em;
     font-size: 50px;
@@ -210,6 +233,45 @@ header {
   cursor: pointer;
 }
 
+.sort_sp {
+  display: none;
+  @include mobile {
+    display: block;
+    position: relative;
+  }
+  .sort_open {
+    @include mobile {
+      display: flex;
+      align-items: center;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 8%;
+      padding-right: 0px;
+      border: none;
+      border-top: 1px solid #012f4e;
+      border-bottom: 1px solid #012f4e;
+      width: 100%;
+      background: none;
+    }
+  }
+  .sort_btn {
+    @include mobile {
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      transform: translateY(-50%);
+      background: #012f4e;
+      height: calc(tan(60deg) * 13px / 2);
+      width: 13px;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      margin-left: 50vw;
+    }
+  }
+  .sort_btn.active {
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  }
+}
+
 .sort_tags {
   display: flex;
   justify-content: center;
@@ -224,14 +286,24 @@ header {
     @include mobile {
       display: flex;
       align-items: center;
-      padding-bottom: 60px;
+      padding-top: 30px;
+      padding-bottom: 30px;
       padding-left: 8%;
       padding-right: 0px;
+      border-bottom: 1px solid #012f4e;
+    }
+    @include middle {
+      font-size: 14px;
+      padding-right: 30px;
     }
     img {
       width: 15px;
       padding-right: 8px;
       margin-bottom: -1px;
+      @include middle {
+        width: 13px;
+        padding-right: 4px;
+      }
     }
     .icon-active {
       display: none;
@@ -247,13 +319,13 @@ header {
 .sort_tags li::before {
   @include mobile {
     content: "";
-    position: absolute;
-    top: -31px;
-    left: 50%;
-    width: 100%;
-    height: 1px;
-    background: #012f4e;
-    transform: translateX(-50%);
+    // position: absolute;
+    // top: -31px;
+    // left: 50%;
+    // width: 100%;
+    // height: 1px;
+    // background: #012f4e;
+    // transform: translateX(-50%);
   }
 }
 .sort_tags li::after {
@@ -268,27 +340,19 @@ header {
   transform: scale(0, 1);
   transform-origin: center top;
   @include mobile {
-    bottom: 30px;
-    left: 50%;
-    width: 100%;
-    height: 1px;
-    transition: unset;
-    transform: translateX(-50%);
+    display: none;
+    // bottom: 30px;
+    // left: 50%;
+    // width: 100%;
+    // height: 1px;
+    // transition: unset;
+    // transform: translateX(-50%);
   }
 }
 .sort_tags li:hover::after {
   transform: scale(1, 1);
   @include mobile {
     transform: none;
-  }
-}
-.sort_btn {
-  @include mobile {
-    background: #012f4e;
-    height: calc(tan(60deg) * 13px / 2);
-    width: 13px;
-    clip-path: polygon(0 0, 100% 0, 50% 100%);
-    margin-left: 50vw;
   }
 }
 

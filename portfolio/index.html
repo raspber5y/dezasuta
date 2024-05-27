@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>unoemi | portfolio</title>
     <meta name="description" content="unoemiのポートフォリオ">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="android-chrome-192x192.png">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/imagesloaded@4.1.4/imagesloaded.pkgd.min.js"></script>
@@ -13,10 +16,10 @@
 </head>
 
 <body>
+    <div id="splash">
+        <div id="splash_text"></div>
+    </div>
     <header id="header">
-        <div id="splash">
-            <div id="splash_text"></div>
-        </div>
         <div class="mv_wrap">
             <div class="top_message">
                 <p class="message_v">Bright</p>
@@ -26,12 +29,13 @@
             </div>
             <div class="scrolldown"><span>scroll</span></div>
             <nav class="pc_nav">
-                <h4>menu</h4>
+                <div class="menu">menu</div>
                 <ul>
-                    <li><a href="#header" class="menu_btn">top</a></li>
-                    <li><a href="./about/index.html" class="menu_btn">about</a></li>
-                    <li><a href="./works/index.html" class="menu_btn">works</a></li>
-                    <li><a href="./contact/contact.html" class="menu_btn">contact</a></li>
+                    <li><a href="./index.html" class="menu_btn js_top">top</a></li>
+                    <li><a href="./about/index.html" class="menu_btn js_about">about</a></li>
+                    <li><a href="./works/index.html" class="menu_btn js_works">works</a></li>
+                    <li><a href="./contact/contact.html" class="menu_btn js_contact">contact</a>
+                    </li>
                 </ul>
             </nav>
             <div class="header_wrap">
@@ -48,7 +52,7 @@
         <div id="js_header" class="second_header">
             <div class="header_wrap">
                 <div>
-                    <a href="#header">
+                    <a href="./index.html">
                         <h1>
                             <img class="emiuno_logo" src="./images/unoemi_logo.png" alt="emiunoのロゴ">
                         </h1>
@@ -71,7 +75,9 @@
                     大切な想いを一緒に形にさせてください。
                 </p>
             </div>
-            <a href="./about/index.html" class="view_more_btn">view more</a>
+            <div class="view_more">
+                <a href="./about/index.html" class="view_more_btn">view more</a>
+            </div>
         </section>
         <section class="philosofhy">
             <div class="philosofhy_title">
@@ -186,10 +192,12 @@
                     </a>
                 </li>
             </ul>
-            <a href="./works/index.html" class="view_more_btn">view more</a>
+            <div class="view_more">
+                <a href="./works/index.html" class="view_more_btn">view more</a>
+            </div>
         </section>
         <div class="contact">
-            <h2 class="hope u-fz">Feel free to contact.</h2>
+            <h2 class="hope">Feel free to contact.</h2>
             <img class="arrow" src="./images/arrow.png" alt="">
             <img class="arrow_sp" src="./images/arrow_sp.png" alt="">
             <a href="./contact/contact.html" class="contact_btn">
@@ -199,7 +207,7 @@
         </div>
     </main>
     <footer class="footer">
-        <a href="#header" class="footer_btn">top</a>
+        <a href="./index.html" class="footer_btn">top</a>
         <a href="./about/index.html" class="footer_btn">about</a>
         <a href="./works/index.html" class="footer_btn">works</a>
         <a href="./contact/contact.html" class="footer_btn">contact</a>
@@ -210,8 +218,6 @@
     <script src="./js/script.js"></script>
 
     <!-- ローディング -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
     <script>
         //テキストのカウントアップ+バーの設定

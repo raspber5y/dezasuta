@@ -6,15 +6,35 @@
 // レスポンシブ対応
 // ブレイクポイント
 $mb: 767px;
+$tb: 834px;
+$md: 990px;
+$anm: 1100px;
 // @mediaのフォーマット
 @mixin mobile {
   @media screen and (max-width: $mb) {
     @content;
   }
 }
+@mixin tablet {
+  @media screen and (max-width: $tb) {
+    @content;
+  }
+}
+@mixin middle {
+  @media screen and (max-width: $md) {
+    @content;
+  }
+}
+@mixin animation {
+  @media screen and (max-width: $anm) {
+    @content;
+  }
+}
+// フォント
+$font-italiana: "Italiana", serif;
+$font-cambay: "Cambay", sans-serif;
 
 /* cssリセット */
-
 /*利用するタグによってこちらの内容は増やす*/
 
 html,
@@ -66,20 +86,23 @@ main {
   padding-left: 13%;
   padding-top: 200px;
   z-index: 98;
-  h4 {
+  .menu {
     width: 40px;
     padding-bottom: 10px;
     border-bottom: solid 1px #ffffff;
     margin-bottom: 80px;
   }
   ul .menu_btn {
-    display: block;
-    font-family: Cambay;
+    display: flex;
+    align-items: center;
+    font-family: $font-cambay;
     font-size: 30px;
     color: #ffffff;
     position: relative;
     margin-bottom: 80px;
     padding-left: 40px;
+    height: 30px;
+    cursor: pointer;
     @include mobile {
       font-size: 22px;
     }
@@ -123,15 +146,19 @@ main {
       left: 6px;
     }
   }
+  ul .menu_btn.ja {
+    font-size: 20px;
+  }
 }
 
 .pc_btn {
-  font-family: Cambay;
+  font-family: $font-cambay;
   font-size: 30px;
   color: #ffffff;
   position: relative;
   padding-right: 40px;
   z-index: 99;
+  cursor: pointer;
   @include mobile {
     font-size: 24px;
   }
@@ -227,6 +254,8 @@ main {
     }
     .emiuno_logo {
       width: 58px;
+      position: relative;
+      z-index: 99;
       @include mobile {
         width: 50px;
       }
@@ -235,10 +264,11 @@ main {
       opacity: 0;
     }
     .pc_btn {
-      font-family: Cambay;
+      font-family: $font-cambay;
       font-size: 30px;
       color: #ffffff;
       padding-right: 40px;
+      cursor: pointer;
       @include mobile {
         font-size: 24px;
       }
@@ -259,6 +289,7 @@ main {
       }
     }
     .pc_btn::after {
+      position: fixed;
       content: "";
       position: absolute;
       top: 50%;
@@ -332,12 +363,9 @@ main {
 }
 .is_active {
   /* 表示する */
-  opacity: 0.5;
+  opacity: 1;
   visibility: visible;
   transition: opacity 0.5s, transform 0.5s;
-}
-.is_active:hover {
-  opacity: 1;
 }
 
 // フッター
@@ -347,12 +375,12 @@ main {
   padding-top: 100px;
   padding-left: 7%;
   @include mobile {
-    height: 530px;
-    padding-top: 200px;
+    height: 380px;
+    padding-top: 150px;
   }
 }
 .footer .footer_btn {
-  font-family: Cambay;
+  font-family: $font-cambay;
   font-size: 26px;
   color: #012f4e;
   position: relative;
@@ -361,7 +389,13 @@ main {
   @include mobile {
     font-size: 17px;
     margin-right: 0px;
+    padding-left: 40px;
+    margin-bottom: 40px;
+  }
+  @include middle {
     display: block;
+    font-size: 17px;
+    margin-right: 0px;
     padding-left: 40px;
     margin-bottom: 40px;
   }
@@ -407,4 +441,7 @@ main {
   margin-top: 265px;
   padding-right: 10%;
   text-align: right;
+  @include middle {
+    margin-top: 130px;
+  }
 }

@@ -51,20 +51,23 @@ main {
   padding-top: 200px;
   z-index: 98;
 }
-.pc_nav h4 {
+.pc_nav .menu {
   width: 40px;
   padding-bottom: 10px;
   border-bottom: solid 1px #ffffff;
   margin-bottom: 80px;
 }
 .pc_nav ul .menu_btn {
-  display: block;
-  font-family: Cambay;
+  display: flex;
+  align-items: center;
+  font-family: "Cambay", sans-serif;
   font-size: 30px;
   color: #ffffff;
   position: relative;
   margin-bottom: 80px;
   padding-left: 40px;
+  height: 30px;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .pc_nav ul .menu_btn {
@@ -116,14 +119,18 @@ main {
     left: 6px;
   }
 }
+.pc_nav ul .menu_btn.ja {
+  font-size: 20px;
+}
 
 .pc_btn {
-  font-family: Cambay;
+  font-family: "Cambay", sans-serif;
   font-size: 30px;
   color: #ffffff;
   position: relative;
   padding-right: 40px;
   z-index: 99;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .pc_btn {
@@ -239,6 +246,8 @@ main {
 }
 .second_header .header_wrap .emiuno_logo {
   width: 58px;
+  position: relative;
+  z-index: 99;
 }
 @media screen and (max-width: 767px) {
   .second_header .header_wrap .emiuno_logo {
@@ -249,10 +258,11 @@ main {
   opacity: 0;
 }
 .second_header .header_wrap .pc_btn {
-  font-family: Cambay;
+  font-family: "Cambay", sans-serif;
   font-size: 30px;
   color: #ffffff;
   padding-right: 40px;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .second_header .header_wrap .pc_btn {
@@ -277,6 +287,7 @@ main {
   }
 }
 .second_header .header_wrap .pc_btn::after {
+  position: fixed;
   content: "";
   position: absolute;
   top: 50%;
@@ -361,13 +372,9 @@ main {
 
 .is_active {
   /* 表示する */
-  opacity: 0.5;
+  opacity: 1;
   visibility: visible;
   transition: opacity 0.5s, transform 0.5s;
-}
-
-.is_active:hover {
-  opacity: 1;
 }
 
 .footer {
@@ -378,13 +385,13 @@ main {
 }
 @media screen and (max-width: 767px) {
   .footer {
-    height: 530px;
-    padding-top: 200px;
+    height: 380px;
+    padding-top: 150px;
   }
 }
 
 .footer .footer_btn {
-  font-family: Cambay;
+  font-family: "Cambay", sans-serif;
   font-size: 26px;
   color: #012f4e;
   position: relative;
@@ -395,7 +402,15 @@ main {
   .footer .footer_btn {
     font-size: 17px;
     margin-right: 0px;
+    padding-left: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .footer .footer_btn {
     display: block;
+    font-size: 17px;
+    margin-right: 0px;
     padding-left: 40px;
     margin-bottom: 40px;
   }
@@ -450,16 +465,21 @@ main {
   padding-right: 10%;
   text-align: right;
 }
+@media screen and (max-width: 990px) {
+  .footer .copyright {
+    margin-top: 130px;
+  }
+}
 
 h2 {
   font-size: 30px;
   letter-spacing: 0.1em;
-  font-family: Italiana;
+  font-family: "Italiana", serif;
   font-weight: normal;
 }
 
-h4 {
-  font-family: Italiana;
+.menu {
+  font-family: "Italiana", serif;
   color: #ffffff;
   font-size: 30px;
 }
@@ -505,6 +525,7 @@ header .header_wrap .emiuno_logo {
 }
 header .header_img {
   width: 100%;
+  display: block;
 }
 @media screen and (max-width: 767px) {
   header .header_img {
@@ -673,7 +694,7 @@ header .header_img_sp {
   height: 36px;
   color: #012f4e;
   padding: 10px;
-  background: #c1bcbd;
+  background: #faede8;
   border: none;
   margin-bottom: 30px;
   box-sizing: border-box;
@@ -683,7 +704,7 @@ header .header_img_sp {
   height: 290px;
   color: #012f4e;
   padding: 10px;
-  background: #c1bcbd;
+  background: #faede8;
   border: none;
   margin-bottom: 30px;
   box-sizing: border-box;
@@ -701,11 +722,19 @@ header .header_img_sp {
   margin-right: 0;
   margin-bottom: 140px;
   filter: drop-shadow(-5px 5px 0px rgba(85, 86, 86, 0.3));
+  transition: all 0.2s ease;
 }
 @media screen and (max-width: 767px) {
   .form button {
     margin-bottom: 60px;
+    color: #012f4e;
   }
+}
+.form button:hover {
+  border-color: transparent;
+  filter: none;
+  background: #faede8;
+  transform: translate(-50%, -50%);
 }
 
 .form_checkmark {
@@ -775,7 +804,7 @@ textarea::placeholder {
   }
 }
 .totop .hope {
-  font-family: Italiana;
+  font-family: "Italiana", serif;
   letter-spacing: 0.1em;
   font-size: 50px;
   margin-left: -37%;
@@ -792,6 +821,40 @@ textarea::placeholder {
     transform: translate(-50%, -50%);
     padding-bottom: 350px;
     margin-left: 0px;
+  }
+}
+.totop .arrow {
+  width: 30px;
+  margin-left: 0px;
+  animation: arrowmove 1.6s ease-out infinite;
+}
+@keyframes arrowmove {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .totop .arrow {
+    display: none;
+  }
+}
+.totop .arrow_sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .totop .arrow_sp {
+    display: block;
+    width: 30px;
+    margin-left: 0px;
+    animation: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 150px;
   }
 }
 .totop .contact_btn {
@@ -832,7 +895,7 @@ textarea::placeholder {
   color: #ffffff;
 }
 .totop .contact_btn .btn_text .btn_text_en {
-  font-family: Cambay;
+  font-family: "Cambay", sans-serif;
   font-size: 22px;
 }
 
@@ -852,13 +915,8 @@ textarea::placeholder {
   }
 }
 .thanks_wrap .bluerose {
-  width: 6%;
+  width: 60px;
   margin-bottom: 70px;
-}
-@media screen and (max-width: 767px) {
-  .thanks_wrap .bluerose {
-    width: 20%;
-  }
 }
 .thanks_wrap p {
   font-size: 15px;
